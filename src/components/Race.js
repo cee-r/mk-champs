@@ -19,7 +19,7 @@ function Race(props) {
               <h2>{props.title}</h2>
               <span className="date">{props.date}</span>
             </div>
-            <ul className="players">
+            <ul className={`players ${props.colors}`}>
               {playerList}
             </ul>
           </div>
