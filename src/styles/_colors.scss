@@ -4,39 +4,84 @@ $gray: #e0e0e0;
 $white: #f1f1f1;
 
 $colors: (
-  "red": #b21819,
-  "green": #115314,
-  "blue": #1620a2,
-  "yellow": #ce9d05, //#ffad33
-  "orange": #c06416,
-  "pink": #db416e,
-  "magenta": #c82878,
-  "indigo": #13004d,
-  "purple": #660080,
-  "lime": #86af00,
-  "teal": #428cad,
+  "red": #840000,
+  "green": #1a6b10,
+  "lime": #add000,
+  "blue": #014dac,
+  "light-blue":#1eb8fb,
+  "teal": #007079,
+  "yellow": #ebca00, //#ffad33
+  "orange": #da5d26,
+  // "pink": #f38ca3,
+  "pink": #e28a9e,
+  "magenta": #e32e88,
+  "purple": #401388,
+  "black": $black,
+  "white": $white
 );
 
-$colors-tint: (
-  "red": #f9d0d1,
-  "green": #d0f5d1,
-  "blue": #d2d5f9,
-  "yellow": #fef4d4,
-  "orange": #fbe9da,
-  "pink": #f7d5df,
-  "indigo": #e0d6ff,
-  "purple": #f5ceff,
-  "lime": #f5ffd6,
-  "teal": #d7e8f0,
-);
-
+// Red
+.mario, .baby-mario, .toad, .shy-guy, .yoshi-red, .birdo-red, .villager-male {
+  background-color: map-get($colors, 'red');
+}
 
 // Green
-.bowser-jr {
+.luigi, .baby-luigi, .yoshi, .iggy, .bowser-jr, .link, .shy-guy-green, .bowser {
   background-color: map-get($colors, 'green');
 }
 
-// Daisy
-.daisy, .baby-daisy {
+// Lime 
+.inkling-green, .birdo-green, .isabelle  {
+  background-color: map-get($colors, 'lime');
+}
+
+// Blue 
+.shy-guy-blue, .ludwig, .inkling-male, .yoshi-blue, .birdo-blue {
+  background-color: map-get($colors, 'blue');
+}
+
+// Light Blue 
+.yoshi-light-blue, .link-botw, .lemmy, .larry, .shy-guy-light-blue, .birdo-light-blue, .mii {
+  background-color: map-get($colors, 'light-blue');
+}
+
+// Teal 
+.inkling-teal, .rosalina, .baby-rosalina {
+  background-color: map-get($colors, 'teal');
+}
+
+// Yellow
+.koopa, .lakitu, .wario, .yoshi-yellow, .shy-guy-yellow, .birdo-yellow, .mario-gold, .donkey-king {
+  background-color: map-get($colors, 'yellow');
+}
+
+// Orange
+.daisy, .baby-daisy, .mario-tanookie, .inkling-female, .yoshi-orange, .shy-guy-orange, .birdo-orange {
   background-color: map-get($colors, 'orange');
+}
+
+// Pink
+.peach, .baby-peach, .peach-cat, .peach-pink-gold, .villager-female, .yoshi-pink, .shy-guy-pink {
+  background-color: map-get($colors, 'pink');
+}
+
+// Magenta
+.birdo, .inkling-magenta, .roy, .wendy, .toadette {
+  background-color: map-get($colors, 'magenta');
+}
+
+// Purple
+.waluigi, .inkling-purple {
+  background-color: map-get($colors, 'purple');
+}
+
+// Black
+.dry-bones, .dry-bowser, .morton, .yoshi-black, .shy-guy-black, .birdo-black, .mario-metal {
+  background-color: map-get($colors, 'black');
+}
+
+// WHhte
+
+.king-boo, .yoshi-white, .shy-guy-white, .birdo-white {
+  background-color: $gray;
 }

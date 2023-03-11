@@ -15,10 +15,10 @@ const Races = [
   },
   {
     id: 3,
-    date: 'N/A',
-    title: 'Race III',
-    description: 'N/A',
-    colors: ''
+    date: '2023-03-10',
+    title: 'Race III - MAR10 Day',
+    description: 'Free For All: 4 Heats / 4 Random Tracks / 150CC. Final 4 / 4 Random Tracks / 200CC',
+    colors: 'red'
   },
   {
     id: 4,
@@ -40,35 +40,7 @@ const Races = [
     title: 'Race VI',
     description: 'N/A',
     colors: ''
-  },
-  // {
-  //   id: 7,
-  //   date: 'N/A',
-  //   title: 'Race VII',
-  //   description: 'N/A',
-  //   colors: ''
-  // },
-  // {
-  //   id: 8,
-  //   date: 'N/A',
-  //   title: 'Race VIII',
-  //   description: 'N/A',
-  //   colors: ''
-  // },
-  // {
-  //   id: 9,
-  //   date: 'N/A',
-  //   title: 'Race IX',
-  //   description: 'N/A',
-  //   colors: ''
-  // }, 
-  // {
-  //   id: 10,
-  //   date: 'N/A',
-  //   title: 'Race X',
-  //   description: 'N/A',
-  //   colors: ''
-  // }
+  }
 ];
 
 export default Races;

@@ -42,7 +42,7 @@ const Players = [
   {
     id: 6,
     race: 2,
-    class: 2,
+    class: 'Free For All',
     finish: 2,
     name: 'Hailey M.',
     character: 'bowser-jr'
@@ -60,9 +60,34 @@ const Players = [
     race: 2,
     class: 'Free For All',
     finish: 6,
-    name: 'Bojan L',
+    name: 'Bojan L.',
     character: 'toad'
+  },
+  {
+    id: 9,
+    race: 3,
+    class: 'Free For All',
+    finish: 1,
+    name: 'Celina R.',
+    character: 'baby-mario'
+  },
+  {
+    id: 10,
+    race: 3,
+    class: 'Free For All',
+    finish: 5,
+    name: 'Bojan L.',
+    character: 'toad'
+  },
+  {
+    id: 11,
+    race: 3,
+    class: 'Free For All',
+    finish: 9,
+    name: 'Anthony B.',
+    character: 'birdo'
   }
+
 ];
 
 export default Players;

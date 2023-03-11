@@ -18,3 +18,11 @@
   - Daisy
     - Daisy
     - Baby Daisy
+
+
+## To Do
+
+- Update villager portraits
+- Mario Font
+- Winner name and place style
+- Fix color
