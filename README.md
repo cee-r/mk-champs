@@ -1,5 +1,14 @@
 # Mario Kart Champs
 
+## Update
+
+- Update Data
+  - `src/data/Races.js`
+  - `src/data/Players.js`
+- Commit and Push Changes to git
+- Deploy
+  - `npm deploy`
+
 ## Data
 
 ### Races 
@@ -126,12 +135,3 @@
 | Yoshi (White)        | `yoshi-white`        |
 | Yoshi (Yellow)       | `yoshi-yellow`       |
 
-
-## To Do
-
-- Mario Font
-- Winner name and place style
-- Fix color
-- Documentation
-- Boilerplate
-  - Favicon
