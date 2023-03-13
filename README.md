@@ -1,14 +1,5 @@
 # Mario Kart Champs
 
-## Update
-
-- Update Data
-  - `src/data/Races.js`
-  - `src/data/Players.js`
-- Commit and push changes to git
-- Deploy
-  - `npm run deploy`
-
 ## Data
 
 ### Races 
@@ -135,3 +126,12 @@
 | Yoshi (White)        | `yoshi-white`        |
 | Yoshi (Yellow)       | `yoshi-yellow`       |
 
+
+## Update
+
+- Update Data
+  - `src/data/Races.js`
+  - `src/data/Players.js`
+- Commit and push changes to git
+- Deploy
+  - `npm run deploy`
