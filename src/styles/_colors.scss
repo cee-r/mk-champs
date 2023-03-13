@@ -26,12 +26,12 @@ $colors: (
 }
 
 // Green
-.luigi, .baby-luigi, .yoshi, .iggy, .bowser-jr, .link, .shy-guy-green, .bowser {
+.luigi, .baby-luigi, .yoshi, .bowser, .bowser-jr, .link, .iggy, .shy-guy-green {
   background-color: map-get($colors, 'green');
 }
 
 // Lime 
-.inkling-green, .birdo-green, .isabelle  {
+.birdo-green, .inkling-green, .isabelle  {
   background-color: map-get($colors, 'lime');
 }
 
@@ -51,7 +51,7 @@ $colors: (
 }
 
 // Yellow
-.koopa, .lakitu, .wario, .yoshi-yellow, .shy-guy-yellow, .birdo-yellow, .mario-gold, .donkey-king {
+.koopa-troopa, .lakitu, .wario, .yoshi-yellow, .shy-guy-yellow, .birdo-yellow, .mario-gold, .donkey-king {
   background-color: map-get($colors, 'yellow');
 }
 
@@ -80,7 +80,7 @@ $colors: (
   background-color: map-get($colors, 'black');
 }
 
-// WHhte
+// White
 
 .king-boo, .yoshi-white, .shy-guy-white, .birdo-white {
   background-color: $gray;
