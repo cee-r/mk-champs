@@ -82,6 +82,34 @@ const Players = [
     finish: 12,
     name: 'N/A',
     character: 'secret'
+  },
+  {
+    id: 13,
+    race: 4,
+    finish: 1,
+    name: 'Celina R.',
+    character: 'dry-bones'
+  },
+  {
+    id: 14,
+    race: 4,
+    finish: 2,
+    name: 'Hailey M.',
+    character: 'bowser-jr'
+  },
+  {
+    id: 15,
+    race: 4,
+    finish: 3,
+    name: 'Bojan L.',
+    character: 'shy-guy-black'
+  },
+  {
+    id: 16,
+    race: 4,
+    finish: 4,
+    name: 'Michael K.',
+    character: 'link'
   }
 ];
 
