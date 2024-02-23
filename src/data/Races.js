@@ -29,10 +29,10 @@ const Races = [
   },
   {
     id: 5,
-    date: 'N/A',
+    date: '2023-02-23',
     title: 'Race V',
-    description: 'N/A',
-    colors: ''
+    description: 'Free For All: 4 Heats / 4 Random Tracks / 150CC / Final 4 Choose Tracks',
+    colors: 'light-blue'
   },
   {
     id: 6,
