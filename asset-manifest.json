@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "./static/css/main.27bb4ee7.css",
-    "main.js": "./static/js/main.a0a617fe.js",
+    "main.js": "./static/js/main.133944e3.js",
     "static/media/mario_kart.ttf": "./static/media/mario_kart.0651abbb7f9186191028.ttf",
     "index.html": "./index.html",
     "main.27bb4ee7.css.map": "./static/css/main.27bb4ee7.css.map",
-    "main.a0a617fe.js.map": "./static/js/main.a0a617fe.js.map"
+    "main.133944e3.js.map": "./static/js/main.133944e3.js.map"
   },
   "entrypoints": [
     "static/css/main.27bb4ee7.css",
-    "static/js/main.a0a617fe.js"
+    "static/js/main.133944e3.js"
   ]
 }
