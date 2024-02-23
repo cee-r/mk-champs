@@ -79,8 +79,7 @@ $colors: (
   background-color: map-get($colors, 'black');
 }
 
-// White
-
+// White (Move to complimentary colours if needed)
 .king-boo, .yoshi-white, .shy-guy-white {
   background-color: $gray;
 }
