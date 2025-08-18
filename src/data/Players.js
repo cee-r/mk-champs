@@ -110,6 +110,34 @@ const Players = [
     finish: 4,
     name: 'Michael K.',
     character: 'link'
+  },
+  {
+    id: 17,
+    race: 5,
+    finish: 1,
+    name: 'Celina R.',
+    character: 'birdo-white'
+  },
+  {
+    id: 18,
+    race: 5,
+    finish: 2,
+    name: 'Jesse S.',
+    character: 'toad'
+  },
+  {
+    id: 19,
+    race: 5,
+    finish: 4,
+    name: 'Chantal T.',
+    character: 'yoshi'
+  },
+  {
+    id: 20,
+    race: 5,
+    finish: 5,
+    name: 'Joe W.',
+    character: 'mario'
   }
 ];
 

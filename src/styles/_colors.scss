@@ -39,8 +39,8 @@ $colors: (
   background-color: map-get($colors, 'blue');
 }
 
-// Light Blue 
-.yoshi-light-blue, .link-botw, .lemmy, .larry, .shy-guy-light-blue, .birdo-light-blue, .mii {
+// Light Blue + Birdo (White)
+.yoshi-light-blue, .link-botw, .lemmy, .larry, .shy-guy-light-blue, .birdo-light-blue, .mii, .birdo-white {
   background-color: map-get($colors, 'light-blue');
 }
 
@@ -81,6 +81,6 @@ $colors: (
 
 // White
 
-.king-boo, .yoshi-white, .shy-guy-white, .birdo-white {
+.king-boo, .yoshi-white, .shy-guy-white {
   background-color: $gray;
 }
