@@ -27,7 +27,7 @@
             {{ if eq .position 1 }}
                 {{ $portrait_classes = "w-48 h-48 rounded-full bg-gray-50 border-8 border-gray-50 flex block"}}
             {{ else }}
-                {{ $portrait_classes = "w-15 inline-block"}}
+                {{ $portrait_classes = "w-15 block"}}
             {{ end}}
 
             {{ partial "atoms/portrait" (dict "context" . 
@@ -36,7 +36,7 @@
                 "conditional" $portrait_classes
             ) }}
 
-            <span class="inline-block px-2.5 {{ if eq .position 1 }} w-full text-white text-center mt-5 {{ else }} w-70 {{ end}}">
+            <span class="inline-block px-2.5 {{ if eq .position 1 }} w-80 text-white text-center mt-5 {{ else }} w-70 {{ end}}">
                 {{ $name_classes := "" }}
                 {{ if eq .position 1 }} 
                     {{ $name_classes = "text-3xl" }}
@@ -57,7 +57,7 @@
                 {{ end}}
 
                 {{ partial "atoms/combo" (dict "context" . 
-                    "classes" "combo block invisible opacity-0 text-xs group-hover:visible group-hover:opacity-100 transition-opacity delay-300 duration-1000 ease-in-out hover-slide"
+                    "classes" "combo block invisible opacity-0 text-xs group-hover:visible group-hover:opacity-100 group-active:visible group-active:opacity-100 group-focus:visible group-focus:opacity-100 transition-opacity delay-300 duration-1000 ease-in-out hover-slide"
                     "conditional" $combo_classes 
                 ) }}
             </span>
@@ -66,7 +66,7 @@
             {{ if eq .position 1 }} 
                 {{ $position_classes = "w-25 absolute bottom-2 right-0" }}
             {{ else }} 
-                {{ $position_classes = "inline-block w-15" }}
+                {{ $position_classes = "block w-15 absolute right-0 me-[1rem] xl:relative xl:right-auto" }}
             {{ end}}
             
             {{ partial "atoms/position.html" (dict "context" . 

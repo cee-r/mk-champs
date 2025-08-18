@@ -1,8 +1,6 @@
 {{ $game_version := .Params.game }}
 
-{{/*  TODO: Redesign players responsive  */}}
-
-<ul class="mk-player md:absolute md:right-0">
+<ul class="mk-player py-10 md:py-0 w-full md:w-[90%] lg:w-auto lg:absolute lg:right-0">
 {{ range $i, $p := sort .Params.players "position" "asc" }}
 
     {{ $max := 145 }}
@@ -10,7 +8,7 @@
     {{ $position_scale := sub $max (mul $i $step) }}
     {{/*  {{ $md_position_scale := sub 140 (mul $i 20) }}  */}}
 
-    <li class="flex justify-end items-center lg:scale-{{$position_scale}} origin-[100%_50%] md:py-5 border-gray-200 {{ if eq $i 0 }}md:mt-10 md:mb-10{{ else if eq $i 3 }} md:mt-5 md:mb-0 border-t-1 {{ else }} border-t-1 md:my-5 {{ end }}">
+    <li class="flex justify-center md:justify-end items-center lg:scale-{{$position_scale}} origin-[100%_50%] lg:py-5 border-gray-200 {{ if eq $i 0 }}lg:mt-10 lg:mb-10{{ else if eq $i 3 }} lg:mt-5 lg:mb-0 md:border-t-1 {{ else }} md:border-t-1 lg:my-5 {{ end }}">
     
         {{ partial "atoms/portrait" (dict "context" . "gamePath" $game_version "classes" "block w-20 w-20 me-5 flex" ) }}
 

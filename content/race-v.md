@@ -7,7 +7,7 @@ title = "Race V"
 description = "Free For All: 4 Heats / 4 Random Tracks / Final 4 Choose Tracks"
 game = "mk8dx"
 mode = ["vs", "150CC"]
-#reel = "reels/highlight-reel-v.mp4"
+reel = "reels/highlight-reel-v.mp4"
 #reel = "https://static1.polygonimages.com/wordpress/wp-content/uploads/chorus/uploads/chorus_asset/file/24419429/Switch_MK8D_BCP_Screen_02.jpg"
 
 # Result
