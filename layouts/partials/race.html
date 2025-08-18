@@ -1,17 +1,20 @@
-<div class="race mb-10 w-full md:w-1/2 lg:w-1/3">
+<div class="race mb-10 w-full">
 
-    <div class="race-info">
-        <div>{{ .Title }}</div>
-        <div>{{ .Date | time.Format ":date_medium" }}</div>
+    <div class="race-info flex justify-between items-center">
+        <div class="meta">
+            <div class="text-lg">{{ .Title }}</div>
+            <div class="text-xs">{{ .Date | time.Format ":date_medium" }}</div>
+        </div>
+        
         <ul class="tags">
-            {{ range .Params.game }}<li>{{ . }} </li>{{ end}}
-            {{ range .Params.mode }}<li>{{ . }} </li>{{ end}}
+            {{ range .Params.game }}<li class="inline-block"><span class="rounded-full border border-zinc-900 px-2.5 py-0.5 text-xs whitespace-nowrap uppercase">{{ . }}</span></li>{{ end}}
+            {{ range .Params.mode }}<li class="inline-block"><span class="rounded-full border border-zinc-900 px-2.5 py-0.5 text-xs whitespace-nowrap uppercase">{{ . }}</span></li>{{ end}}
         </ul>
     </div>
 
-    <ul>
+    <ul class="players">
     {{ range sort .Params.players "placement" "asc" }}
-        <li>{{ .name }} — {{ .placement }} ({{ .character }})</li>
+        <li class="{{ if eq .placement 1 }}winner {{ .character}}{{ end }}">{{ .name }} — {{ .placement }} ({{ .character }})</li>
     {{ end }}
     </ul>
 </div>
