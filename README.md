@@ -15,7 +15,7 @@
 
 ### FE Stack
 
-Dice roll on a pretty jank combo but fuck it we ball... 😭
+[Dice roll on a pretty jank combo](https://slotmaker.net/game/caf30461-812f-40d4-8dd5-4d15418a580b) but fuck it we ball... 😭
 
 - Hugo 
 - Tailwind 🤮
