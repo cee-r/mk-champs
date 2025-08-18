@@ -3,8 +3,6 @@
 - [Project](#project)
   - [FE Stack](#fe-stack)
   - [Content Update](#content-update)
-    - [Local](#local)
-    - [Github Repo](#github-repo)
     - [Deploying](#deploying)
     - [Scaffolding](#scaffolding)
     - [Example content](#example-content)
@@ -25,13 +23,13 @@ Dice roll on a pretty jank combo but fuck it we ball 😭
 
 ### Content Update
 
-#### Local 
+Locally:
 
 - Build project with `npm` and `hugo`
 - `hugo new <race-name>.md` creates a new race file in the content directory based on the archetype
 - Update fields with new info
 
-#### Github Repo
+Directly on GitHub Repo:
 
 - Copy and paste existing content `.md` file to create a new one with new info
 
