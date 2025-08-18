@@ -1,4 +1,4 @@
-{{ $bg_image := "/images/art/mario-kart-world-tall-1440x2960.jpg" }}
+{{ $bg_image := "/images/art/mario-kart-world-tall-1440x2960.webp" }}
 <div class="mk-history relative bg-[url({{ .Site.Params.base_path }}{{ $bg_image}})] bg-no-repeat bg-center bg-cover">
     <div class="mk-races relative z-1 mx-auto py-30 max-w-7xl grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10 px-10 xl:px-0">
         {{ $sortedPages := sort .RegularPages "Date" "desc" }}
