@@ -6,7 +6,8 @@ date = {{ .Date }}
 title = "{{ replace .File.ContentBaseName "-" " " | title }}"
 description = "Ruleset"
 game = "mk8dx"
-mode = ["vs", "150CC"]
+mode = ["vs", "150CC"] 
+reel = ""
 
 # Result
 [[players]]

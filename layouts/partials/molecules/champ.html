@@ -1,6 +1,6 @@
 {{ $game_version := .Params.game }}
 
-<div class="race-winner">
+<div class="reigning-champ">
  
     {{ $reigning_champ := first 1 (sort .Params.players "position" "asc") }}
     {{ with index $reigning_champ 0 }}
@@ -11,7 +11,7 @@
         "conditional" ""
     ) }}
 
-    <span class="block px-2.5 w-full text-white text-center mt-5">
+    <span class="block">
         {{ partial "atoms/name" ( dict "context" .
             "classes" "block font-bold text-3xl"
             "conditional" ""
@@ -19,7 +19,7 @@
         {{ partial "atoms/combo" (dict "context" . "classes" "combo block text-xs") }}
     </span>
     
-    <span class="position text-end w-25"> 
+    <span class="position"> 
        {{ partial "atoms/position.html" . }}
     </span>
     

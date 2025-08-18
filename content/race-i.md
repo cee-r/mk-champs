@@ -7,7 +7,7 @@ title = "Race I"
 description = "Free For All: 4 Heats / 4 Random Tracks / 150CC. Final 4 / 4 Random Tracks / 200CC"
 game = "mk8dx"
 mode = ["vs", "200CC"]
-color = "green"
+reel = ""
 
 # Result
 [[players]]

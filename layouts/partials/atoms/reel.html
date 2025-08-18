@@ -1,5 +1,11 @@
+{{ $ext := strings.TrimPrefix "." (path.Ext .Params.reel) }}
+
+{{ if eq $ext "mp4" }}
 <div class="video absolute">
     <video autoplay loop muted disablePictureInPicture class="relative inset-0 w-full h-[600px] object-cover sepia-25">
-        <source src="videos/highlight-reel-v.mp4" type="video/mp4">
+        <source src="{{ .Params.reel }}" type="video/mp4">
     </video>
 </div>
+{{ else }}
+<img class="image object-cover absolute inset-0 w-full h-[600px]" src="{{ .Params.reel }}" />
+{{ end }}
