@@ -3,33 +3,23 @@
     "tags": [
       "a",
       "body",
-      "defs",
       "div",
       "h1",
       "head",
       "html",
       "img",
       "li",
-      "lineargradient",
       "link",
       "meta",
       "p",
-      "path",
-      "radialgradient",
       "script",
       "source",
       "span",
-      "stop",
-      "svg",
       "title",
       "ul",
       "video"
     ],
     "classes": [
-      "(index",
-      ".Params.players",
-      "0).character",
-      "2xl:w-1/2",
       "absolute",
       "art",
       "baby-daisy",
@@ -38,7 +28,6 @@
       "bg-gray-50",
       "bg-zinc-900",
       "birdo-white",
-      "birdo-whitetoadyoshimario",
       "block",
       "border",
       "border-8",
@@ -68,7 +57,6 @@
       "group-hover:visible",
       "h-48",
       "h-[600px]",
-      "h-full",
       "hero",
       "hover-slide",
       "hover:md:scale-110",
@@ -113,7 +101,6 @@
       "race",
       "race-info",
       "race-players",
-      "race-winner",
       "races",
       "reigning-champ",
       "relative",
@@ -151,9 +138,6 @@
       "xl:w-3/5",
       "z-1"
     ],
-    "ids": [
-      "SvgjsLinearGradient1001",
-      "SvgjsRadialGradient1000"
-    ]
+    "ids": null
   }
 }

@@ -1,11 +1,5 @@
 @import "_characters";
 
-// .losers {
-//     @media (min-width: 768px) { 
-//         clip-path: polygon(0 0, 100% 0%, 100% 100%, 25% 100%);
-//      }
-// }
-
 .feature {
     @media (min-width: 768px) { 
         &::after {
@@ -27,13 +21,6 @@
 
 .race  {
     &:hover {
-        .hover-bounce {
-            animation: bounce .7s;
-        }
-
-        // .hover-fade-slide {
-        //     animation: fadeInUp .7s;
-        // }
         .hover-slide {
             transform: translate(0, 0) !important;
         }
@@ -43,10 +30,6 @@
         li:nth-child(2) .position { animation-delay: .2s; }
         li:nth-child(3) .position { animation-delay: .3s; }
         li:nth-child(4) .position { animation-delay: .4s; }
-
-        // li:nth-child(2) .combo { transition-delay: .2s; }
-        // li:nth-child(3) .combo { transition-delay: .3s; }
-        // li:nth-child(4) .combo { transition-delay: .4s; }
 
         li:not(.winner) {
             .name {
