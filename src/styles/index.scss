@@ -1,5 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
 @import "colors";
 @import "utility";
+
+@font-face {
+  font-family: 'MarioKart';
+  src: local('mario_kart'),
+  url("mario_kart.ttf") format("truetype");
+  font-weight: 400;
+}
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -8,7 +17,7 @@
 body {
   margin: 0;
   font-size: 14px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 }
 
 .mk-champs {
@@ -22,6 +31,10 @@ body {
       padding: 0;
       text-align: center;
       color: $white;
+      font-family: 'MarioKart',  'Open Sans', sans-serif;
+      font-weight: 700;
+      font-size: 2.2rem;
+      text-transform: uppercase;
     }
   }
 
@@ -43,21 +56,19 @@ body {
       width: 30%;
     }
 
-    // @each $color, $hex in $colors-tint {
-    //   // Lighten base color? Lighten doesn't produce consistent color values for the set
-    //   &.#{$color} {
-    //     background-color: $hex; 
-    //     border: 0;
-    //   }
-    // }
-
     @each $color, $hex in $colors {
       &.#{$color} {
-        background-color: rgba($hex, .25);
+        background-color: rgba($hex, .10);
         border: 0;
+
+        .race {
+          color: scale-color($hex, $lightness: -30%);
+        }
+        
+        .player { border-top-color:rgba($hex, .2); }
       }
 
-      &.#{$color} .player { border-top-color:rgba($hex, .2); }
+
     }
 
   }
@@ -100,7 +111,13 @@ body {
             width: auto;
             display: inline-block;
             margin: .5rem 0;
+                        
+            &::before {
+              content: '👑';
+              margin-right: .5rem;
+            }
           }
+
           .portrait {
             display: inline-block;
             border-radius: 50%;
@@ -111,6 +128,19 @@ body {
 
             img {
               max-height: 100px;
+            }
+          }
+
+          .place {
+            display: none;
+          }
+        }
+
+        &.placeholder:first-child {
+          .name {
+            color: $black;
+            &::before {
+              display: none;
             }
           }
         }

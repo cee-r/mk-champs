@@ -19,21 +19,21 @@
   - Colors based on winner's character
   
 
-  | Color      | Input        | Characters                                                                                               |
-  | ---------- | ------------ | -------------------------------------------------------------------------------------------------------- |
-  | Red        | `red`        | Mario, Baby Mario, Toad, Shy Guy, Village (Male), Yoshi (Red), Birdo (Red)                               |
-  | Green      | `green`      | Luigi, Baby Luigi, Yoshi, Bowser, Bowser Jr., Link, Iggy, Shy Guy (Green)                                |
-  | Lime       | `lime`       | Isabelle, Birdo (Green), Inkling (Green)                                                                 |
-  | Blue       | `blue`       | Ludwig, Inkling (Male), Yoshi (Blue), Shy Guy (Blue), Birdo (Blue)                                       |
-  | Light Blue | `light-blue` | Lemmy, Larry, Mii, Link (BOTW), Yoshi (Light Blue), Shy Guy (Light Blue), Birdo (Light Blue)             |
-  | Teal       | `teal`       | Rosalina, Baby Rosalina, Inkling (Teal)                                                                  |
-  | Yellow     | `yellow`     | Koopa Troopa, Lakitu, Wario, Donkey Kong, Mario (Gold), Yoshi (Yellow), Shy Guy (Yellow), Birdo (Yellow) |
-  | Orange     | `orange`     | Daisy, Baby Daisy, Mario (Tanooki), Inkling (Female), Yoshi (Orange), Shy Guy (Orange), Birdo (Orange)   |
-  | Pink       | `pink`       | Peach, Baby Peach, Peach (Cat), Peach (Pink Gold), Villager (Female), Yoshi (Pink), Shy Guy (Pink)       |
-  | Magenta    | `magenta`    | Birdo, Roy, Wendy, Toadette, Inkling (Magenta)                                                           |
-  | Purple     | `purple`     | Waluigi, Inkling (Purple)                                                                                |
-  | Black      | `black`      | Dry Bones,  Dry Bowser, Morton, Mario (Metal), Yoshi (Black), Shy Guy (Black), Birdo (Black)             |
-  | White      | `white`      | King Boo, Yoshi (White), Shy Guy (White), Birdo (White)                                                  |
+| Color      | Input        | Characters                                                                                               |
+| ---------- | ------------ | -------------------------------------------------------------------------------------------------------- |
+| Red        | `red`        | Mario, Baby Mario, Toad, Shy Guy, Village (Male), Yoshi (Red), Birdo (Red)                               |
+| Green      | `green`      | Luigi, Baby Luigi, Yoshi, Bowser, Bowser Jr., Link, Iggy, Shy Guy (Green)                                |
+| Lime       | `lime`       | Isabelle, Birdo (Green), Inkling (Green)                                                                 |
+| Blue       | `blue`       | Ludwig, Inkling (Male), Yoshi (Blue), Shy Guy (Blue), Birdo (Blue)                                       |
+| Light Blue | `light-blue` | Lemmy, Larry, Mii, Link (BOTW), Yoshi (Light Blue), Shy Guy (Light Blue), Birdo (Light Blue)             |
+| Teal       | `teal`       | Rosalina, Baby Rosalina, Inkling (Teal)                                                                  |
+| Yellow     | `yellow`     | Koopa Troopa, Lakitu, Wario, Donkey Kong, Mario (Gold), Yoshi (Yellow), Shy Guy (Yellow), Birdo (Yellow) |
+| Orange     | `orange`     | Daisy, Baby Daisy, Mario (Tanooki), Inkling (Female), Yoshi (Orange), Shy Guy (Orange), Birdo (Orange)   |
+| Pink       | `pink`       | Peach, Baby Peach, Peach (Cat), Peach (Pink Gold), Villager (Female), Yoshi (Pink), Shy Guy (Pink)       |
+| Magenta    | `magenta`    | Birdo, Roy, Wendy, Toadette, Inkling (Magenta)                                                           |
+| Purple     | `purple`     | Waluigi, Inkling (Purple)                                                                                |
+| Black      | `black`      | Dry Bones,  Dry Bowser, Morton, Mario (Metal), Yoshi (Black), Shy Guy (Black), Birdo (Black)             |
+| White      | `white`      | King Boo, Yoshi (White), Shy Guy (White), Birdo (White)                                                  |
 
 
 ### Players
