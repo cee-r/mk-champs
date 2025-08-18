@@ -1,19 +1,22 @@
 {{ $game_version := .Params.game }}
 
-{{/*  TODO: Redesign players and do responsive  */}}
+{{/*  TODO: Redesign players responsive  */}}
 
-<ul class="mk-players absolute top-0 right-0">
+<ul class="mk-player md:absolute md:right-0">
 {{ range $i, $p := sort .Params.players "position" "asc" }}
 
-    {{ $position_scale := sub 160 (mul $i 20) }}
+    {{ $max := 145 }}
+    {{ $step := div (sub $max 100) 3 }}
+    {{ $position_scale := sub $max (mul $i $step) }}
+    {{/*  {{ $md_position_scale := sub 140 (mul $i 20) }}  */}}
 
-    <li class="flex justify-end items-center scale-{{$position_scale}}">
+    <li class="flex justify-end items-center lg:scale-{{$position_scale}} origin-[100%_50%] md:py-5 border-gray-200 {{ if eq $i 0 }}md:mt-10 md:mb-10{{ else if eq $i 3 }} md:mt-5 md:mb-0 border-t-1 {{ else }} border-t-1 md:my-5 {{ end }}">
     
-        {{ partial "atoms/portrait" (dict "context" . "gamePath" $game_version "classes" "block w-20 me-5" ) }}
+        {{ partial "atoms/portrait" (dict "context" . "gamePath" $game_version "classes" "block w-20 w-20 me-5 flex" ) }}
 
-        <span class="block w-60">
+        <span class="block w-50 xl:w-60">
             {{ partial "atoms/name" ( dict "context" . "classes" "block font-bold text-xl text-black" ) }}
-            {{ partial "atoms/combo" (dict "context" . "classes" "combo block text-sm text-black" ) }}
+            {{ partial "atoms/combo" (dict "context" . "classes" "combo block text-xs text-black" ) }}
         </span>
 
         
