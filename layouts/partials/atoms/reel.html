@@ -1,5 +1,7 @@
 {{ $ext := strings.TrimPrefix "." (path.Ext .Params.reel) }}
 
+{{/*  TODO: Accessibility pause button for video */}}
+
 {{ if eq $ext "mp4" }}
     <div class="mk-hero-video absolute w-full md:w-1/2 lg:w-2/3 xl:w-3/4 xxl:w-full">
         <video autoplay loop muted disablePictureInPicture class="relative inset-0 w-full h-[600px] object-cover sepia-25">

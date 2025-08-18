@@ -43,7 +43,6 @@ $sky: #0058f8;
         background: #fff;
         background-blend-mode: multiply;
         background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 0%, #262626 100%);
-        // backdrop-filter: blur(4px);
         opacity: 1;
         position: absolute;
         bottom: 0;
@@ -56,18 +55,6 @@ $sky: #0058f8;
             @media (min-width: 1024px) {
                 background-color: none;
             }
-            // li {
-            //     background-color: red;
-            //     margin: 1rem 0;
-                
-            // }
-
-            // li:first-child { transform: scale(1.5); }
-
-            // li:first-child { right: 0px; }
-            // li:nth-child(2) { top: 128px; right: 80px; }
-            // li:nth-child(3) { top: 240px; right: 40px; }
-            // li:nth-child(4) { top: 336px; right: 0;}
         }
     }
 
