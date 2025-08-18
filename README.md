@@ -132,7 +132,7 @@ combo = ["Standard", "Standard", "Standard"]
 
 ### Characters
 
-| Character            | Input                | Game    |
+| : Character          | : Input              |: Game   |
 | -------------------- | -------------------- | ------- |
 | Baby Daisy           | `baby-daisy`         | `mk8dx` |
 | Baby Luigi           | `baby-luigi`         | `mk8dx` |
@@ -217,7 +217,7 @@ combo = ["Standard", "Standard", "Standard"]
 
 ### Colours 
 
-| Color      | Input        | Characters                                                                                                                 |
+| : Color    | : Input      | : Characters                                                                                                               |
 | ---------- | ------------ | -------------------------------------------------------------------------------------------------------------------------- |
 | Red        | `red`        | Mario, Baby Mario, Toad, Shy Guy, Village (Male), Yoshi (Red), Birdo (Red), Diddy Kong, Funky Kong, Pauline, Petey Prianha |
 | Green      | `green`      | Luigi, Baby Luigi, Yoshi, Bowser, Bowser Jr., Link, Iggy, Shy Guy (Green)                                                  |
