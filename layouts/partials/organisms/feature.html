@@ -1,6 +1,8 @@
 {{ $latest := first 1 (sort .RegularPages "Date" "desc") }}
 {{ with index $latest 0 }}
 
+    {{/* TODO: Responsive feature area  sm /md */}}
+
 <div class="mk-feature relative z-1 bg-zinc-900 {{ (index .Params.players 0).character }} text-white relative flex flex-col">
  
     {{ if .Params.reel }}
@@ -9,8 +11,7 @@
     
     <div class="container relative z-1 min-h-[600px] mx-auto max-w-7xl flex flex-col md:flex-row">
 
-        {{/*  TODO: Redesign  */}}
-        <div class="mk-event w-[40%]">
+        <div class="mk-event flex flex-col justify-end  w-[40%]">
             {{ partial "molecules/event" . }}
         </div>
 
