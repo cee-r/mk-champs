@@ -1,15 +1,14 @@
 # Mario Kart Champs
 
-- [Mario Kart Champs](#mario-kart-champs)
-  - [Project](#project)
-    - [FE Stack](#fe-stack)
-    - [Content Update](#content-update)
-      - [Scaffolding](#scaffolding)
-      - [Example content](#example-content)
-      - [Deploying](#deploying)
-  - [Reference](#reference)
-    - [Characters](#characters)
-    - [Colours](#colours)
+- [Project](#project)
+  - [FE Stack](#fe-stack)
+  - [Content Update](#content-update)
+    - [Scaffolding](#scaffolding)
+    - [Example content](#example-content)
+    - [Deploying](#deploying)
+- [Reference](#reference)
+  - [Characters](#characters)
+  - [Colours](#colours)
 
 ## Project
 
