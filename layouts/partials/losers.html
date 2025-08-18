@@ -1,0 +1,11 @@
+<div class="race-info">
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    <p>{{ .Date | time.Format ":date_medium" }}</p>
+</div>
+
+<ul class="race-players">
+    {{ $sortedPlayer := sort .Params.players "placement" "asc" }}
+    {{ range (after 1 $sortedPlayer) }}
+    <li>{{ .name }} — {{ .placement }} ({{ .character }}) lol</li>
+    {{ end }}
+</ul>

@@ -10,32 +10,18 @@
     <div class="art"></div>
   </div>
 
-  <div class="feature bg-zinc-900 text-white">
-    <div class="container mx-auto py-50 max-w-7xl flex flex-col md:flex-row">
+  <div class="feature bg-zinc-900 text-white relative flex flex-col">
+    {{ partial "video.html" . }}
+    <div class="container relative z-1 min-h-[600px] mx-auto max-w-7xl flex flex-col md:flex-row">
       {{ $latest := first 1 (sort .RegularPages "Date" "desc") }}
       {{ with index $latest 0 }}
 
-      <div class="reigning-champ w-full lg:w-1/2">
-        <div class="race-winner">
-          {{ $reigningChamp := first 1 (sort .Params.players "placement" "asc") }}
-          {{ with index $reigningChamp 0 }}
-          {{ .name }} — {{ .placement }} ({{ .character }})
-          {{ end }}
-        </div>
+      <div class="reigning-champ w-full md:w-3/4 xl:w-3/5 flex items-center">
+        {{ partial "champ.html" . }}
       </div>
 
-      <div class="losers w-full lg:w-1/2">
-        <div class="race-info">
-          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-          <p>{{ .Date | time.Format ":date_medium" }}</p>
-        </div>
-
-        <ul class="race-players">
-          {{ $sortedPlayer := sort .Params.players "placement" "asc" }}
-          {{ range (after 1 $sortedPlayer) }}
-          <li>{{ .name }} — {{ .placement }} ({{ .character }})</li>
-          {{ end }}
-        </ul>
+      <div class="losers bg-zinc-900 w-full  md:w-2/4 xl:w-2/5">
+        {{ partial "losers.html" . }}
       </div>
       
       {{ end }}

@@ -1,6 +1,14 @@
 @import "_characters";
 
 // Overrides
+.losers {
+    @media (min-width: 768px) { 
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 25% 100%);
+     }
+
+}
+
+
 .race  {
     &:hover {
         .hover-bounce {

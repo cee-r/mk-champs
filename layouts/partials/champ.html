@@ -1,0 +1,38 @@
+<div class="race-winner">
+    {{ $gameVersion := .Params.game }}
+    {{ $reigningChamp := first 1 (sort .Params.players "placement" "asc") }}
+    {{ with index $reigningChamp 0 }}
+
+    <span class="portrait w-48 h-48 rounded-full bg-gray-50 border-8 border-gray-50 flex block">
+        {{ $characterName := .character | humanize | title }}
+        <img class="mx-auto self-center" src="images/{{ $gameVersion }}/portrait/{{ .character}}.png" alt="{{ $characterName }}" />
+    </span>
+
+    <span class="block px-2.5 w-full text-white text-center mt-5">
+    <span class="name block font-bold text-3xl">{{ .name }}</span>
+    <span class="combo block text-xs inline-block text-center text-3xl border-gray-50/30 border-t-1 mt-1 pt-1">
+        {{ range $i, $combo := .combo }}
+            {{ if eq $i 0 }}
+                {{ $combo }}
+            {{ else }}
+                | {{ $combo }}
+            {{ end }}
+        {{ end }}
+    </span>
+    </span>
+    
+    <span class="position text-end w-25"> 
+        {{ $position := .placement}}
+
+        {{ $positionUI := "" }}
+        {{ if ge $position 5 }}
+            {{ $positionUI = "position_gray_" }}
+        {{ else }}
+            {{ $positionUI = "position_" }}
+        {{ end }}
+
+        <img src="images/ui/position/{{ $positionUI }}{{ $position }}.png" alt="{{ $position }}st place" />
+    </span>
+    
+    {{ end }}
+</div>
