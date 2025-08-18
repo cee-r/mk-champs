@@ -6,7 +6,10 @@ module.exports = {
     "./themes/**/*.{html,js}"
   ],
   theme: {
-    extend: {},
+    extend: {
+      rotate: {}, // This removes all rotate utilities
+      skew: {},   // This removes all skew utilities
+    },
   },
   plugins: [],
 }

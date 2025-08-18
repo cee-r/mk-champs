@@ -118,8 +118,12 @@ Rebuild
 ## Project
 
 ### FE Stack
-- Hugo (was curious about it)
-- Tailwind (because I hate myself)
+
+- Hugo 
+- Tailwind
+- Atomic design methodology
+
+Rolled the dice for fun / learning. Pretty jank combo but fuck it we ball 😭
 
 ### Updating
 

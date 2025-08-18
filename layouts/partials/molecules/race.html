@@ -1,0 +1,71 @@
+{{/*  Card Component  */}}
+{{ $winning_character := index (where .Params.players "position" 1) 0 "character" }}
+{{ $game_version := .Params.game }}
+
+<div class="race {{ $winning_character }} group mb-10 w-full shadow-md transition duration-300 ease-in-out hover:md:scale-110">
+
+    <div class="race-info flex justify-between items-center px-5 py-2.5 text-white border-b-1 border-gray-50/30">
+
+        {{ partial "atoms/meta" (dict "context" . 
+            "classes_title" "text-lg" 
+            "classes_date" "text-sm"
+        ) }}
+
+        {{ partial "atoms/tags" (dict "context" .
+            "classes" "rounded-full border border-gray-50 px-2.5 py-0.5 text-xs whitespace-nowrap uppercase"
+        ) }}
+    </div>
+
+    {{/*  <div class="description text-white p-5"> {{ .Params.description }} </div>  */}}
+
+    <ul class="players pb-2.5">
+
+    {{ range sort .Params.players "position" "asc" }}
+        <li class="flex items-center justify-self-center-safe relative {{ if eq .position 1 }}winner min-h-[345px] p-10 flex-col {{ else }} px-5 py-2.5 bg-gray-50 {{ end }}">
+           
+            {{ $portrait_classes := "" }}
+            {{ if eq .position 1 }}
+                {{ $portrait_classes = "w-48 h-48 rounded-full bg-gray-50 border-8 border-gray-50 flex block"}}
+            {{ else }}
+                {{ $portrait_classes = "w-15 inline-block"}}
+            {{ end}}
+
+            {{ partial "atoms/portrait" (dict "context" . 
+                "gamePath" $game_version
+                "classes" ""
+                "conditional" $portrait_classes
+            ) }}
+
+            <span class="inline-block px-2.5 {{ if eq .position 1 }} w-full text-white text-center mt-5 {{ else }} w-70 {{ end}}">
+                {{ $name_classes := "" }}
+                {{ if eq .position 1 }} 
+                    {{ $name_classes = "text-3xl" }}
+                {{ else }} 
+                    {{ $name_classes = "hover-slide text-start " }}
+                {{ end}}
+
+                {{ partial "atoms/name" ( dict "context" .
+                    "classes" "block font-bold"
+                    "conditional" $name_classes
+                ) }}
+
+                {{ $combo_classes := "" }}
+                {{ if eq .position 1 }} 
+                    {{ $combo_classes = "inline-block text-center text-3xl border-gray-50/30 border-t-1 mt-1 pt-1" }}
+                {{ else }} 
+                    {{ $combo_classes = "text-start border-gray-500/30"}} 
+                {{ end}}
+
+                {{ partial "atoms/combo" (dict "context" . 
+                    "classes" "combo block invisible opacity-0 text-xs group-hover:visible group-hover:opacity-100 transition-opacity delay-300 duration-1000 ease-in-out hover-slide"
+                    "conditional" $combo_classes 
+                ) }}
+            </span>
+
+            <span class="position text-end {{ if eq .position 1 }} w-25 absolute bottom-2 right-0 {{ else }} inline-block w-15 {{ end}}"> 
+                {{ partial "atoms/position.html" . }}
+            </span>
+        </li>
+    {{ end }}
+    </ul>
+</div>

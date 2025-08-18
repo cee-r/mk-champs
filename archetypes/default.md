@@ -7,30 +7,29 @@ title = "{{ replace .File.ContentBaseName "-" " " | title }}"
 description = "Ruleset"
 game = "mk8dx"
 mode = ["vs", "150CC"]
-color = ""
 
 # Result
 [[players]]
 name = "Player 1"
-placement = 1
+position = 1
 character = "mario"
 combo = ["Standard", "Standard", "Standard"]
 
 [[players]]
 name = "Player 2"
-placement = 2
+position = 2
 character = "luigi"
 combo = ["Standard", "Standard", "Standard"]
 
 [[players]]
 name = "Player 3"
-placement = 3
+position = 3
 character = "toad"
 combo = ["Standard", "Standard", "Standard"]
 
 [[players]]
 name = "Player 4"
-placement = 4
+position = 4
 character = "yoshi"
 combo = ["Standard", "Standard", "Standard"]
 +++

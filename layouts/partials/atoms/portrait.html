@@ -1,0 +1,4 @@
+<span class="portrait {{ .classes }} {{ .conditional }}">
+    {{ $character_name := .context.character | humanize | title }}
+    <img class="mx-auto self-center" src="images/{{ .gamePath }}/portrait/{{ .context.character }}.png" alt="{{ $character_name }}" />
+</span>

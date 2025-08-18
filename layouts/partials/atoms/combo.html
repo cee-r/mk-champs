@@ -1,0 +1,9 @@
+<span class="{{ .classes }} {{ .conditional }}">
+    {{ range $i, $combo := .context.combo }}
+        {{ if eq $i 0 }}
+            {{ $combo }}
+        {{ else }}
+            | {{ $combo }}
+        {{ end }}
+    {{ end }}
+</span>
