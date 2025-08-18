@@ -117,7 +117,7 @@ combo = ["Standard", "Standard", "Standard"]
 - `reel` : string
   - Media displayed in the feature area
   - Takes mp4 or images
-  - If empty, the aria displays a color block based on winning character
+  - If empty, the area displays a color block based on winning character
 - `players` : nested array
   -`name` : string
     - Name of player (Firstname L.)
