@@ -18,7 +18,7 @@ combo = ["Biddybuggy", "Roller", "Cloud Glider"]
 
 [[players]]
 name = "Bojan L."
-placement = 3
+placement = 5
 character = "toad"
 combo = ["Standard", "Standard", "Standard"]
 
