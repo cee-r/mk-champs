@@ -1,0 +1,139 @@
+@import "colors";
+@import "utility";
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.mk-champs {
+
+  header {
+    background-color: $black;
+    padding: 1rem;
+
+    h1 {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      color: $white;
+    }
+  }
+
+  main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .list {
+    flex: 1 1 auto;
+    width: 100%;
+
+     @media screen and (min-width: map_get($breakpoints, 'md')) {
+      width: 50%;
+    }
+
+    @media screen and (min-width: map_get($breakpoints, 'lg')) {
+      width: 30%;
+    }
+
+    @each $color, $hex in $colors-tint {
+      // Lighten base color? Lighten doesn't produce consistent color values for the set
+      &.#{$color} { background-color:$hex;}
+    }
+
+    @each $color, $hex in $colors {
+      &.#{$color} .player { border-top-color:rgba($hex, .2); }
+    }
+
+  }
+
+  .item {
+    margin: 1rem 0;
+
+    .race {
+      padding: 0.25rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1rem ;
+
+      h2 {
+        padding: 0;
+        margin: 0;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+    }
+
+    ul.players {
+      margin: 0rem;
+      padding: 0;
+      list-style: none;
+
+      .player {
+
+        &.winner, &.placeholder:first-child {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 1rem 0;
+          border-top: 0;
+
+          .name {
+            font-size: 1.75rem;
+            font-weight: bold;
+            color: $white;
+            width: auto;
+            display: inline-block;
+            margin: .5rem 0;
+          }
+          .portrait {
+            display: inline-block;
+            border-radius: 50%;
+            background: #fff;
+            padding: 0.5rem;
+            width: auto;
+
+            img {
+              max-height: none;
+            }
+          }
+        }
+      
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: .5rem 1rem;
+        border-top-width: 1px;
+        border-top-style: solid;
+
+        &.placeholder {
+          border-color: $gray;
+        }
+
+        span {
+          display: block;
+
+          &.portrait {
+            width: 50px;
+          }
+          &.name {
+            width: 75%;
+          }
+        }
+
+        .portrait {
+          img {
+            max-height: 50px;
+          }
+        }
+      }
+    }
+  }
+  
+}

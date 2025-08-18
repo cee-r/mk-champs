@@ -1,4 +1,5 @@
 import Players from "../data/Players"
+import Placeholder from "./Placeholder";
 import Player from "./Player"
 
 function Race(props) {
@@ -11,19 +12,30 @@ function Race(props) {
     )
   })
 
+  // Final 4 Placeholder
+  const placeholderList = [];
+  for (let i = 0; i < 4; i++) {
+    placeholderList.push(<Placeholder key={i} />);
+  }
+
   return (
-    <div className="list">
-        {props.date === 'N/A' ? 'no race' : (
-          <div className="item">
-            <div className="race">
-              <h2>{props.title}</h2>
-              <span className="date">{props.date}</span>
-            </div>
-            <ul className={`players ${props.colors}`}>
-              {playerList}
-            </ul>
-          </div>
+    <div className={`list ${props.colors}`}>
+      <div className="item">
+        <div className="race">
+          <h2>{props.title}</h2>
+          <span className="date">{props.date}</span>
+        </div>
+        {props.date === 'N/A' ? (
+          <ul className="players">
+            { placeholderList}
+          </ul>
+        ) : (
+          <ul className="players">
+            {playerList}
+          </ul> 
         )}
+        
+      </div>
     </div>
   );
 }

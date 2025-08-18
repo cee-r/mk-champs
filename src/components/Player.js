@@ -9,7 +9,7 @@ function Player(props) {
   let characterName = toTitleCase(props.portrait);
 
   return (
-    <li className={props.place === 1 ? 'player winner' : 'player'}>
+    <li className={props.place === 1 ? `player winner ${props.portrait}` : 'player'}>
       <span className="portrait"><img src={'./img/portrait/' + props.portrait + '.png'} alt={characterName} /></span>
       <span className="name">{props.name}</span>
       <span className="place">

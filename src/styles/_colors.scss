@@ -1,0 +1,42 @@
+// Neutrals
+$black: #262626;
+$gray: #e0e0e0;
+$white: #f1f1f1;
+
+$colors: (
+  "red": #b21819,
+  "green": #115314,
+  "blue": #1620a2,
+  "yellow": #ce9d05, //#ffad33
+  "orange": #c06416,
+  "pink": #db416e,
+  "magenta": #c82878,
+  "indigo": #13004d,
+  "purple": #660080,
+  "lime": #86af00,
+  "teal": #428cad,
+);
+
+$colors-tint: (
+  "red": #f9d0d1,
+  "green": #d0f5d1,
+  "blue": #d2d5f9,
+  "yellow": #fef4d4,
+  "orange": #fbe9da,
+  "pink": #f7d5df,
+  "indigo": #e0d6ff,
+  "purple": #f5ceff,
+  "lime": #f5ffd6,
+  "teal": #d7e8f0,
+);
+
+
+// Green
+.bowser-jr {
+  background-color: map-get($colors, 'green');
+}
+
+// Daisy
+.daisy, .baby-daisy {
+  background-color: map-get($colors, 'orange');
+}
