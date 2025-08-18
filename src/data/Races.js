@@ -9,14 +9,14 @@ const Races = [
   {
     id: 2,
     date: '2022-12-13',
-    title: 'Race II',
+    title: 'Holiday Party',
     description: 'Free For All: 4 Heats / 4 Random Tracks / 150CC. Final 4 / 4 Random Tracks / 200CC',
     colors: 'orange'
   },
   {
     id: 3,
     date: '2023-03-10',
-    title: 'Race III - MAR10 Day',
+    title: 'MAR10 Day',
     description: 'Free For All: 4 Heats / 4 Random Tracks / 150CC. Final 4 / 4 Random Tracks / 200CC',
     colors: 'red'
   },

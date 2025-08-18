@@ -2,7 +2,6 @@ const Players = [
   {
     id: 1,
     race: 1,
-    class: 'Free For All',
     finish: 1,
     name: 'Hailey M.',
     character: 'bowser-jr'
@@ -10,7 +9,6 @@ const Players = [
   {
     id: 2,
     race: 1,
-    class: 'Free For All',
     finish: 2,
     name: 'Celina R.',
     character: 'baby-rosalina'
@@ -18,7 +16,6 @@ const Players = [
   {
     id: 3,
     race: 1,
-    class: 'Free For All',
     finish: 3,
     name: 'Jesse S.',
     character: 'toad'
@@ -26,7 +23,6 @@ const Players = [
   {
     id: 4,
     race: 1,
-    class: 'Free For All',
     finish: 6,
     name: 'Ralph F.',
     character: 'yoshi'
@@ -34,7 +30,6 @@ const Players = [
   {
     id: 5,
     race: 2,
-    class: 'Free For All',
     finish: 1,
     name: 'Celina R.',
     character: 'baby-daisy'
@@ -42,7 +37,6 @@ const Players = [
   {
     id: 6,
     race: 2,
-    class: 'Free For All',
     finish: 2,
     name: 'Hailey M.',
     character: 'bowser-jr'
@@ -50,7 +44,6 @@ const Players = [
   {
     id: 7,
     race: 2,
-    class: 'Free For All',
     finish: 5,
     name: 'Brandon C.',
     character: 'donkey-kong'
@@ -58,7 +51,6 @@ const Players = [
   {
     id: 8,
     race: 2,
-    class: 'Free For All',
     finish: 6,
     name: 'Bojan L.',
     character: 'toad'
@@ -66,7 +58,6 @@ const Players = [
   {
     id: 9,
     race: 3,
-    class: 'Free For All',
     finish: 1,
     name: 'Celina R.',
     character: 'baby-mario'
@@ -74,7 +65,6 @@ const Players = [
   {
     id: 10,
     race: 3,
-    class: 'Free For All',
     finish: 5,
     name: 'Bojan L.',
     character: 'toad'
@@ -82,10 +72,9 @@ const Players = [
   {
     id: 11,
     race: 3,
-    class: 'Free For All',
     finish: 9,
     name: 'Anthony B.',
-    character: 'birdo'
+    character: 'birdo-white'
   }
 
 ];
