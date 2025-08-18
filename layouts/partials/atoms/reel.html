@@ -4,7 +4,11 @@
 
 {{ if eq $ext "mp4" }}
     <div class="mk-hero-video absolute w-full md:w-1/2 lg:w-2/3 xl:w-3/4 xxl:w-full">
-        <video autoplay loop muted disablePictureInPicture class="relative inset-0 w-full h-[600px] object-cover sepia-25">
+        <a href="#" id="mk-reel-toggle" class="block absolute top-0 left-0 z-40 text-5xl m-[1rem] text-shadow-lg/3">
+            <i class="mk-reel-toggle-icon fa-regular fa-circle-pause"></i> 
+            <span class="mk-reel-togsgle-label sr-only">Pause the video</span>
+        </a>
+        <video id="mk-reel-video" autoplay loop muted disablePictureInPicture class="relative inset-0 w-full h-[600px] object-cover sepia-25" >
             <source src="{{ .Params.reel }}" type="video/mp4">
         </video>
     </div>

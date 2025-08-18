@@ -1,46 +1,32 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // let heroVideo = document.getElementById('hero-video');
-    // let heroToggle = document.getElementById('hero-video-toggle');
-    // let heroToggleLabel = document.querySelector('.hero-video-toggle-label');
-    // let heroToggleIcon = document.querySelector('.hero-video-toggle-icon');
-    // let heroVideoArea = document.querySelector('.hero-video-area');
-    // if (heroVideo) {
-    //     function playVideo() {
-    //         heroVideo.play();
-    //         heroToggleLabel.textContent = "Pause the video";
-    //         heroToggleIcon.classList.remove('fa-play');
-    //         heroToggleIcon.classList.add('fa-pause');
-    //     }
-    //     function pauseVideo() {
-    //         heroVideo.pause();
-    //         heroToggleLabel.textContent = "Play the video";
-    //         heroToggleIcon.classList.remove('fa-pause');
-    //         heroToggleIcon.classList.add('fa-play');
-    //     }
-    //     function toggleVideo() {
-    //         if (heroVideo.paused)
-    //             playVideo();
-    //         else
-    //             pauseVideo();
-    //     }
-    //     heroToggle.addEventListener("click", toggleVideo);
-    //     heroVideoArea.addEventListener("click", toggleVideo);
-    //     heroVideo.addEventListener('pause', () => {
-    //         document.cookie = "heroVideoPaused=true; path=/; max-age=86400";
-    //     }
-    //     );
-    //     heroVideo.addEventListener('play', () => {
-    //         document.cookie = "heroVideoPaused=false; path=/; max-age=86400";
-    //     }
-    //     );
-    // }
-    // function getCookie(name) {
-    //     const value = `; ${document.cookie}`;
-    //     const parts = value.split(`; ${name}=`);
-    //     if (parts.length === 2)
-    //         return parts.pop().split(';').shift();
-    // }
-    // let paused = getCookie('heroVideoPaused') === 'true';
-    // if (paused && heroVideo)
-    //     pauseVideo();
+    let reel_video = document.getElementById('mk-reel-video');
+    let reel_video_toggle = document.getElementById('mk-reel-toggle');
+    let reel_video_toggle_label = document.querySelector('.mk-reel-toggle-label');
+    let reel_video_toggle_icon = document.querySelector('.mk-reel-toggle-icon');
+    let reel_area = document.querySelector('.mk-hero-video');
+
+    if (reel_video) {
+        function playVideo() {
+            reel_video.play();
+            // reel_video_toggle_label = "Pause the video";
+            // reel_video_toggle_icon.classList.remove('fa-play');
+            // reel_video_toggle_icon.classList.add('fa-pause');
+        }
+        function pauseVideo() {
+            reel_video.pause();
+            // reel_video_toggle_label.textContent = "Play the video";
+            // reel_video_toggle_icon.classList.remove('fa-pause');
+            // reel_video_toggle_icon.classList.add('fa-play');
+        }
+        function toggleVideo() {
+            if (reel_video.paused) {
+                playVideo();
+            } else {
+                pauseVideo();
+            }       
+        }
+
+        reel_video_toggle.addEventListener("click", toggleVideo);
+        // reel_area.addEventListener("click", toggleVideo);
+    }
 });
