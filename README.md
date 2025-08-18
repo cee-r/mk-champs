@@ -5,9 +5,9 @@
 - Update Data
   - `src/data/Races.js`
   - `src/data/Players.js`
-- Commit and Push Changes to git
+- Commit and push changes to git
 - Deploy
-  - `npm deploy`
+  - `npm run deploy`
 
 ## Data
 
