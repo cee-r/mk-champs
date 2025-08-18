@@ -3,9 +3,11 @@
 - [Project](#project)
   - [FE Stack](#fe-stack)
   - [Content Update](#content-update)
+    - [Local](#local)
+    - [Github Repo](#github-repo)
+    - [Deploying](#deploying)
     - [Scaffolding](#scaffolding)
     - [Example content](#example-content)
-    - [Deploying](#deploying)
 - [Reference](#reference)
   - [Characters](#characters)
   - [Colours](#colours)
@@ -22,6 +24,20 @@ Dice roll on a pretty jank combo but fuck it we ball 😭
 - Atomic design methodology
 
 ### Content Update
+
+#### Local 
+
+- Build project with `npm` and `hugo`
+- `hugo new <race-name>.md` creates a new race file in the content directory based on the archetype
+- Update fields with new info
+
+#### Github Repo
+
+- Copy and paste existing content `.md` file to create a new one with new info
+
+#### Deploying
+
+Automatically builds and deploys to githubpages on push to `2.x` branch.
 
 #### Scaffolding
 
@@ -113,10 +129,6 @@ combo = ["Standard", "Standard", "Standard"]
     - Character the player used ([refer to the list](#characters))
   - `combo` : array
     - List of strings of vehicle parts used
-
-#### Deploying
-
-Automatically builds and deploys to githubpages on push to `2.x` branch.
 
 ## Reference
 
