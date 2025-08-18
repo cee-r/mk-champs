@@ -8,3 +8,8 @@ title = 'Mario Kart Champions'
 
 [params]
   base_path = '/mk-champs'
+
+# [taxonomies]
+# Use singular rather than plural for default taxonomies
+# mode = "mode"
+# game = "game"

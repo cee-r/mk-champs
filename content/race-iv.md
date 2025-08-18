@@ -5,7 +5,7 @@ draft = false
 date = 2023-06-07T16:44:20-04:00
 title = "Race IV"
 description = "Free For All: 4 Heats / 4 Random Tracks / 150CC"
-mode = ["vsrace"]
+mode = ["vs-race"]
 game = ["mk8dx"]
 color = "black"
 

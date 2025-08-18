@@ -1,0 +1,17 @@
+<div class="race">
+
+    <div class="race-info">
+        <div>{{ .Title }}</div>
+        <div>{{ .Date | time.Format ":date_medium" }}</div>
+        <ul class="tags">
+            {{ range .Params.game }}<li>{{ . }} </li>{{ end}}
+            {{ range .Params.mode }}<li>{{ . }} </li>{{ end}}
+        </ul>
+    </div>
+
+    <ul>
+    {{ range sort .Params.players "placement" "asc" }}
+        <li>{{ .name }} — {{ .placement }} ({{ .character }})</li>
+    {{ end }}
+    </ul>
+</div>

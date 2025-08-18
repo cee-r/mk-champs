@@ -1,4 +1,40 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
+
+<div class="container">
+  <div class="hero">
+    <div class="title">
+      <span>I&ITS</span>
+      <h1>Mario Kart <span>Champions</span></h1>
+    </div>
+    <div class="art"></div>
+  </div>
+
+  <div class="feature">
+    <div class="reigning-champ">
+      <div class="race-winner">
+
+      </div>
+    </div>
+
+    <div class="race-info"></div>
+    <div class="race-players"></div>
+  </div>
+
+  {{ $latest := first 1 (sort .RegularPages "Date" "desc") }}
+  {{ with index $latest 0 }}
+    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    <p>{{ .Date | time.Format ":date_medium" }}</p>
+  {{ end }}
+
+  <hr>
+
+  <div class="races">
+    {{ $sortedPages := sort .RegularPages "Date" "desc" }}
+    {{ range (after 1 $sortedPages) }}
+      {{ partial "race" . }}
+    {{ end }}
+  </div>
+  
+</div>
+
 {{ end }}

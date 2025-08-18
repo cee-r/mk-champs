@@ -5,7 +5,7 @@ draft = false
 date = 2022-12-13T16:22:23-04:00
 title = "Holiday Party"
 description = "Free For All: 4 Heats / 4 Random Tracks / 150CC. Final 4 / 4 Random Tracks / 200CC"
-mode = ["vsrace"]
+mode = ["vs-race"]
 game = ["mk8dx"]
 color = "orange"
 
