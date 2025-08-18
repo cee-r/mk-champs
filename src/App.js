@@ -4,7 +4,7 @@ import Race from "./components/Race"
 function App() {
   const raceList = Races.map(race => {
     return (
-      <Race key={race.id} title={race.title} date={race.date} id={race.id} />
+      <Race key={race.id} title={race.title} date={race.date} id={race.id} colors={race.colors} />
     )
   })
   return (
