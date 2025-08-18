@@ -2,9 +2,9 @@
 {{ $winning_character := index (where .Params.players "position" 1) 0 "character" }}
 {{ $game_version := .Params.game }}
 
-<div class="race {{ $winning_character }} group mb-10 w-full shadow-md transition duration-300 ease-in-out hover:md:scale-110">
+<div class="mk-race {{ $winning_character }} backface-hidden group mb-10 pb-2.5 w-full shadow-md transition duration-300 ease-in-out hover:md:scale-110">
 
-    <div class="race-info flex justify-between items-center px-5 py-2.5 text-white border-b-1 border-gray-50/30">
+    <div class="mk-race-info flex justify-between items-center px-5 py-2.5 text-white border-b-1 border-gray-50/30">
 
         {{ partial "atoms/meta" (dict "context" . 
             "classes_title" "text-lg" 
@@ -18,10 +18,10 @@
 
     {{/*  <div class="description text-white p-5"> {{ .Params.description }} </div>  */}}
 
-    <ul class="players pb-2.5">
+    <ul class="mk-players bg-gray-50">
 
     {{ range sort .Params.players "position" "asc" }}
-        <li class="flex items-center justify-self-center-safe relative {{ if eq .position 1 }}winner min-h-[345px] p-10 flex-col {{ else }} px-5 py-2.5 bg-gray-50 {{ end }}">
+        <li class="flex items-center relative backface-hidden {{ if eq .position 1 }}winner min-h-[345px] p-10 flex-col {{ else }} px-5 py-2.5 {{ end }}">
            
             {{ $portrait_classes := "" }}
             {{ if eq .position 1 }}
@@ -62,7 +62,7 @@
                 ) }}
             </span>
 
-            <span class="position text-end {{ if eq .position 1 }} w-25 absolute bottom-2 right-0 {{ else }} inline-block w-15 {{ end}}"> 
+            <span class="mk-position text-end {{ if eq .position 1 }} w-25 absolute bottom-2 right-0 {{ else }} inline-block w-15 {{ end}}"> 
                 {{ partial "atoms/position.html" . }}
             </span>
         </li>

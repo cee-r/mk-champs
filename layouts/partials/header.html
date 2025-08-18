@@ -18,7 +18,7 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
         <!-- Styles & Scripts -->
-        {{ $style := resources.Get "/css/flavour.scss" | css.Sass | resources.Minify | resources.Fingerprint }}
+        {{ $style := resources.Get "/css/mkchamp.scss" | css.Sass | resources.Minify | resources.Fingerprint }}
         <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 
         {{/*  {{ $js := resources.Get "/js/main.js"}}
@@ -26,4 +26,4 @@
 
     </head>
 
-    <body>
+    <body class="font-roboto w-full h-screen">

@@ -1,33 +1,16 @@
 # Mario Kart Champs
 
 - [Mario Kart Champs](#mario-kart-champs)
-  - [Colours](#colours)
   - [Characters](#characters)
+  - [Colours](#colours)
   - [Project](#project)
     - [FE Stack](#fe-stack)
-    - [Updating](#updating)
-    - [Deploying](#deploying)
+    - [Content Update](#content-update)
+      - [Scaffolding](#scaffolding)
+      - [Example content](#example-content)
+      - [Deploying](#deploying)
 
 Rebuild
-
-## Colours 
-
-| Color      | Input        | Characters                                                                                                                 |
-| ---------- | ------------ | -------------------------------------------------------------------------------------------------------------------------- |
-| Red        | `red`        | Mario, Baby Mario, Toad, Shy Guy, Village (Male), Yoshi (Red), Birdo (Red), Diddy Kong, Funky Kong, Pauline, Petey Prianha |
-| Green      | `green`      | Luigi, Baby Luigi, Yoshi, Bowser, Bowser Jr., Link, Iggy, Shy Guy (Green)                                                  |
-| Lime       | `lime`       | Isabelle, Birdo (Green), Inkling (Green)                                                                                   |
-| Blue       | `blue`       | Ludwig, Inkling (Male), Yoshi (Blue), Shy Guy (Blue), Birdo (Blue)                                                         |
-| Light Blue | `light-blue` | Lemmy, Larry, Mii, Link (BOTW), Yoshi (Light Blue), Shy Guy (Light Blue), Birdo (Light Blue), Kamek                        |
-| Teal       | `teal`       | Rosalina, Baby Rosalina, Inkling (Teal)                                                                                    |
-| Yellow     | `yellow`     | Koopa Troopa, Lakitu, Wario, Donkey Kong, Mario (Gold), Yoshi (Yellow), Shy Guy (Yellow), Birdo (Yellow), Wiggler          |
-| Orange     | `orange`     | Daisy, Baby Daisy, Mario (Tanooki), Inkling (Female), Yoshi (Orange), Shy Guy (Orange), Birdo (Orange)                     |
-| Pink       | `pink`       | Peach, Baby Peach, Peach (Cat), Peach (Pink Gold), Villager (Female), Yoshi (Pink), Shy Guy (Pink), Peachette              |
-| Magenta    | `magenta`    | Birdo, Roy, Wendy, Toadette, Inkling (Magenta)                                                                             |
-| Purple     | `purple`     | Waluigi, Inkling (Purple)                                                                                                  |
-| Black      | `black`      | Dry Bones,  Dry Bowser, Morton, Mario (Metal), Yoshi (Black), Shy Guy (Black), Birdo (Black)                               |
-| White      | `white`      | King Boo, Yoshi (White), Shy Guy (White), Birdo (White)                                                                    |
-
 
 ## Characters
 
@@ -114,6 +97,24 @@ Rebuild
 | Yoshi (White)        | `yoshi-white`        | `mk8dx` |
 | Yoshi (Yellow)       | `yoshi-yellow`       | `mk8dx` |
 
+## Colours 
+
+| Color      | Input        | Characters                                                                                                                 |
+| ---------- | ------------ | -------------------------------------------------------------------------------------------------------------------------- |
+| Red        | `red`        | Mario, Baby Mario, Toad, Shy Guy, Village (Male), Yoshi (Red), Birdo (Red), Diddy Kong, Funky Kong, Pauline, Petey Prianha |
+| Green      | `green`      | Luigi, Baby Luigi, Yoshi, Bowser, Bowser Jr., Link, Iggy, Shy Guy (Green)                                                  |
+| Lime       | `lime`       | Isabelle, Birdo (Green), Inkling (Green)                                                                                   |
+| Blue       | `blue`       | Ludwig, Inkling (Male), Yoshi (Blue), Shy Guy (Blue), Birdo (Blue)                                                         |
+| Light Blue | `light-blue` | Lemmy, Larry, Mii, Link (BOTW), Yoshi (Light Blue), Shy Guy (Light Blue), Birdo (Light Blue), Kamek                        |
+| Teal       | `teal`       | Rosalina, Baby Rosalina, Inkling (Teal)                                                                                    |
+| Yellow     | `yellow`     | Koopa Troopa, Lakitu, Wario, Donkey Kong, Mario (Gold), Yoshi (Yellow), Shy Guy (Yellow), Birdo (Yellow), Wiggler          |
+| Orange     | `orange`     | Daisy, Baby Daisy, Mario (Tanooki), Inkling (Female), Yoshi (Orange), Shy Guy (Orange), Birdo (Orange)                     |
+| Pink       | `pink`       | Peach, Baby Peach, Peach (Cat), Peach (Pink Gold), Villager (Female), Yoshi (Pink), Shy Guy (Pink), Peachette              |
+| Magenta    | `magenta`    | Birdo, Roy, Wendy, Toadette, Inkling (Magenta)                                                                             |
+| Purple     | `purple`     | Waluigi, Inkling (Purple)                                                                                                  |
+| Black      | `black`      | Dry Bones,  Dry Bowser, Morton, Mario (Metal), Yoshi (Black), Shy Guy (Black), Birdo (Black)                               |
+| White      | `white`      | King Boo, Yoshi (White), Shy Guy (White), Birdo (White)                                                                    |
+
 
 ## Project
 
@@ -125,9 +126,25 @@ Rebuild
 
 Rolled the dice for fun / learning. Pretty jank combo but fuck it we ball 😭
 
-### Updating
+### Content Update
 
-Example content
+#### Scaffolding
+
+```
+root
+├── content
+|   └── race.md  
+├── static
+|   ├── images
+|   └── reels
+```
+
+- Content goes in the content directory.
+  - It contains `<race-name>.md` files following the content format below
+- Resouces (images, videos, etc) goes in the static folder
+  - Race specific hero area resources can be placed in `reels` directory
+
+#### Example content
 
 ```
 +++
@@ -138,34 +155,35 @@ date = {{ .Date }}
 title = "{{ replace .File.ContentBaseName "-" " " | title }}"
 description = "Ruleset"
 game = "mk8dx"
-mode = ["vs", "150CC"]
-color = ""
+mode = ["vs", "150CC"] 
+reel = ""
 
 # Result
 [[players]]
 name = "Player 1"
-placement = 1
+position = 1
 character = "mario"
 combo = ["Standard", "Standard", "Standard"]
 
 [[players]]
 name = "Player 2"
-placement = 2
+position = 2
 character = "luigi"
 combo = ["Standard", "Standard", "Standard"]
 
 [[players]]
 name = "Player 3"
-placement = 3
+position = 3
 character = "toad"
 combo = ["Standard", "Standard", "Standard"]
 
 [[players]]
 name = "Player 4"
-placement = 4
+position = 4
 character = "yoshi"
 combo = ["Standard", "Standard", "Standard"]
 +++
+
 ```
 
 - `draft` : boolean
@@ -177,12 +195,20 @@ combo = ["Standard", "Standard", "Standard"]
   - Title of the race
 - `description` : string
   - Ruleset or information of the competition
-- `mode` : string
-  - Mode of the races (vs-race, grand-prix, etc)
+- `mode` : array
+  - Mode of the races (vs, gp, ko, 200cc, etc)
+    - `vs`: VS Race
+    - `gp`: Grand Prix
+    - `ko`: Knock Out Tour
+    - `ba`: Battle
+    - `150CC`: Number CC 
 - `game` : string
   - Abbreviated version of the Mario Kart game played (mk8dx, mkw, etc)
-- `color` : string
-  - Colours to match winner's character ([refer to the list](#colours))
+  - Pathing for game specfic assets rely on this
+- `reel` : string
+  - Media displayed in the feature area
+  - Takes mp4 or images
+  - If empty, the aria displays a color block based on winning character
 - `players` : nested array
   -`name` : string
     - Name of player (Firstname L.)
@@ -193,7 +219,6 @@ combo = ["Standard", "Standard", "Standard"]
   - `combo` : array
     - List of strings of vehicle parts used
 
-
-### Deploying
+#### Deploying
 
 Automatically builds and deploys to githubpages on push to `2.x` branch.

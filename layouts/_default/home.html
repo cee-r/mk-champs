@@ -1,13 +1,17 @@
 {{ define "main" }}
 
-  <div class="bg">
+  <div class="mk-main bg-cover bg-no-repeat bg-center bg-linear-to-br from-cyan-500 to-blue-500">
 
-    <div class="hero container mx-auto py-30 max-w-7xl">
-      <div class="title">
-        <span class="text-sm lg:text-base">I&ITS</span>
-        <h1 class="text-4xl md:text-6xl lg:text-8xl">Mario Kart <span class="block font-bold uppercase">Champions</span></h1>
+    <div class="mk-hero container mx-auto py-30 max-w-7xl">
+
+      {{/*  TODO: Title responsive  */}}
+      <div class="mk-title">
+        <span class="ps-1">I&ITS</span>
+        <h1 class="font-bold">
+          <span class="block font-mariokart tracking-tighter italic text-5xl">MarioKart</span> 
+          <span class="uppercase text-8xl tracking-tighter">Champions</span></h1>
       </div>
-      <div class="art"></div>
+      <div class="mk-art"></div>
     </div>
     
     {{ partial "organisms/feature" . }}
