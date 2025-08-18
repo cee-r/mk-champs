@@ -75,8 +75,14 @@ const Players = [
     finish: 9,
     name: 'Anthony B.',
     character: 'birdo-white'
+  },
+  {
+    id: 12,
+    race: 3,
+    finish: 12,
+    name: 'N/A',
+    character: 'secret'
   }
-
 ];
 
 export default Players;
