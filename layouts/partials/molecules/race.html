@@ -62,9 +62,18 @@
                 ) }}
             </span>
 
-            <span class="mk-position text-end {{ if eq .position 1 }} w-25 absolute bottom-2 right-0 {{ else }} inline-block w-15 {{ end}}"> 
-                {{ partial "atoms/position.html" . }}
-            </span>
+            {{ $position_classes := ""}}
+            {{ if eq .position 1 }} 
+                {{ $position_classes = "w-25 absolute bottom-2 right-0" }}
+            {{ else }} 
+                {{ $position_classes = "inline-block w-15" }}
+            {{ end}}
+            
+            {{ partial "atoms/position.html" (dict "context" . 
+                "classes" "text-end" 
+                "conditional" $position_classes
+            ) }}
+
         </li>
     {{ end }}
     </ul>

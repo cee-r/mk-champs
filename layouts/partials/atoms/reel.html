@@ -1,11 +1,11 @@
 {{ $ext := strings.TrimPrefix "." (path.Ext .Params.reel) }}
 
 {{ if eq $ext "mp4" }}
-<div class="mk-hero-video absolute">
-    <video autoplay loop muted disablePictureInPicture class="relative inset-0 w-full h-[600px] object-cover sepia-25">
-        <source src="{{ .Params.reel }}" type="video/mp4">
-    </video>
-</div>
+    <div class="mk-hero-video absolute xxl:w-full">
+        <video autoplay loop muted disablePictureInPicture class="relative inset-0 w-full h-[600px] object-cover sepia-25">
+            <source src="{{ .Params.reel }}" type="video/mp4">
+        </video>
+    </div>
 {{ else }}
-<img class="mk-hero-image object-cover absolute inset-0 w-full h-[600px]" src="{{ .Params.reel }}" />
+    <img class="mk-hero-image object-cover absolute inset-0 w-full h-[600px]" src="{{ .Params.reel }}" />
 {{ end }}

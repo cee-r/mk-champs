@@ -1,23 +1,25 @@
 {{ $suffix := "" }}
 
-{{ if eq .position 1 }}
+{{ if eq .context.position 1 }}
     {{ $suffix = "st" }}
-{{ else if eq .position 2 }}
+{{ else if eq .context.position 2 }}
     {{ $suffix = "nd" }}
-{{ else if eq .position 3 }}
+{{ else if eq .context.position 3 }}
     {{ $suffix = "rd" }}
 {{ else }}
     {{ $suffix = "th" }}
 {{ end }}
 
-{{ $position := printf "%d%s" .position $suffix }}
+{{ $position := printf "%d%s" .context.position $suffix }}
 
 {{ $positionUI := "" }}
-{{ if ge .position 5 }}
+{{ if ge .context.position 5 }}
     {{ $positionUI = "position_gray_" }}
 {{ else }}
     {{ $positionUI = "position_" }}
 {{ end }}
 
-<img src="images/ui/position/{{ $positionUI }}{{ .position }}.png" alt="{{ $position }} place" />
-<span class="sr-only">{{ $position }} place</span></a>
+<span class="mk-position {{ .classes }} {{ .conditional }}"> 
+    <img src="images/ui/position/{{ $positionUI }}{{ .context.position }}.png" alt="{{ $position }} place" />
+    <span class="sr-only">{{ $position }} place</span></a>
+</span>

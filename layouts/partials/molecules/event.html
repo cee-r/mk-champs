@@ -1,0 +1,17 @@
+{{ $game_version := .Params.game }}
+
+{{/*  TODO: Event title float design  */}}
+
+<div class="mk-race-info">
+
+    {{ .Params.description }}
+    
+        {{ partial "atoms/meta" (dict "context" . 
+        "classes_title" "text-lg" 
+        "classes_date" "text-sm"
+    ) }}
+
+    {{ partial "atoms/tags" (dict "context" .
+        "classes" "rounded-full border border-gray-50 px-2.5 py-0.5 text-xs whitespace-nowrap uppercase"
+    ) }}
+</div>

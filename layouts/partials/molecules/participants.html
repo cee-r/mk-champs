@@ -1,0 +1,25 @@
+{{ $game_version := .Params.game }}
+
+{{/*  TODO: Redesign players and do responsive  */}}
+
+<ul class="mk-players absolute top-0 right-0">
+{{ range $i, $p := sort .Params.players "position" "asc" }}
+
+    {{ $position_scale := sub 160 (mul $i 20) }}
+
+    <li class="flex justify-end items-center scale-{{$position_scale}}">
+    
+        {{ partial "atoms/portrait" (dict "context" . "gamePath" $game_version "classes" "block w-20 me-5" ) }}
+
+        <span class="block w-60">
+            {{ partial "atoms/name" ( dict "context" . "classes" "block font-bold text-xl text-black" ) }}
+            {{ partial "atoms/combo" (dict "context" . "classes" "combo block text-sm text-black" ) }}
+        </span>
+
+        
+        {{ partial "atoms/position.html" (dict "context" . "classes" "block w-20" ) }}
+        
+    </li>
+  
+{{ end }}
+</ul>
