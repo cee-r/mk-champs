@@ -5,7 +5,7 @@ on:
   # Runs on pushes targeting the default branch
   push:
     branches:
-      - 2.x
+      - main
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -98,4 +98,5 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
+
         uses: actions/deploy-pages@v4
