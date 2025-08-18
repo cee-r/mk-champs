@@ -18,7 +18,7 @@
 Dice roll on a pretty jank combo but fuck it we ball 😭
 
 - Hugo 
-- Tailwind
+- Tailwind ~~because I hate myself~~
 - Atomic design methodology
 
 ### Content Update

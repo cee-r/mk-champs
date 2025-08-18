@@ -8,15 +8,15 @@ document.addEventListener("DOMContentLoaded", function() {
     if (reel_video) {
         function playVideo() {
             reel_video.play();
-            // reel_video_toggle_label = "Pause the video";
-            // reel_video_toggle_icon.classList.remove('fa-play');
-            // reel_video_toggle_icon.classList.add('fa-pause');
+            reel_video_toggle_label.innerText = "Pause the video";
+            reel_video_toggle_icon.classList.remove('fa-circle-play');
+            reel_video_toggle_icon.classList.add('fa-circle-pause');
         }
         function pauseVideo() {
             reel_video.pause();
-            // reel_video_toggle_label.textContent = "Play the video";
-            // reel_video_toggle_icon.classList.remove('fa-pause');
-            // reel_video_toggle_icon.classList.add('fa-play');
+            reel_video_toggle_label.innerText = "Play the video";
+            reel_video_toggle_icon.classList.remove('fa-circle-pause');
+            reel_video_toggle_icon.classList.add('fa-circle-play');
         }
         function toggleVideo() {
             if (reel_video.paused) {
