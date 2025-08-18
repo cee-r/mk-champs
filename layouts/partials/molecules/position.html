@@ -1,0 +1,23 @@
+{{ $suffix := "" }}
+
+{{ if eq .position 1 }}
+    {{ $suffix = "st" }}
+{{ else if eq .position 2 }}
+    {{ $suffix = "nd" }}
+{{ else if eq .position 3 }}
+    {{ $suffix = "rd" }}
+{{ else }}
+    {{ $suffix = "th" }}
+{{ end }}
+
+{{ $position := printf "%d%s" .position $suffix }}
+
+{{ $positionUI := "" }}
+{{ if ge .position 5 }}
+    {{ $positionUI = "position_gray_" }}
+{{ else }}
+    {{ $positionUI = "position_" }}
+{{ end }}
+
+<img src="images/ui/position/{{ $positionUI }}{{ .position }}.png" alt="{{ $position }} place" />
+<span class="sr-only">{{ $position }} place</span></a>

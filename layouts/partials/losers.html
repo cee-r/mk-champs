@@ -4,8 +4,8 @@
 </div>
 
 <ul class="race-players">
-    {{ $sortedPlayer := sort .Params.players "placement" "asc" }}
+    {{ $sortedPlayer := sort .Params.players "position" "asc" }}
     {{ range (after 1 $sortedPlayer) }}
-    <li>{{ .name }} — {{ .placement }} ({{ .character }}) lol</li>
+    <li>{{ .name }} — {{ .position }} ({{ .character }}) lol</li>
     {{ end }}
 </ul>

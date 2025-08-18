@@ -1,4 +1,4 @@
-{{ $winningCharacter := index (where .Params.players "placement" 1) 0 "character" }}
+{{ $winningCharacter := index (where .Params.players "position" 1) 0 "character" }}
 
 <div class="race {{ $winningCharacter }} group mb-10 w-full shadow-md transition duration-300 ease-in-out hover:md:scale-110">
 
@@ -19,18 +19,18 @@
     <ul class="players pb-2.5">
 
     {{ $gameVersion := .Params.game }}
-    {{ range sort .Params.players "placement" "asc" }}
+    {{ range sort .Params.players "position" "asc" }}
 
-        <li class="flex items-center justify-self-center-safe relative {{ if eq .placement 1 }}winner min-h-[345px] p-10 flex-col {{ else }} px-5 py-2.5 bg-gray-50 {{ end }}">
+        <li class="flex items-center justify-self-center-safe relative {{ if eq .position 1 }}winner min-h-[345px] p-10 flex-col {{ else }} px-5 py-2.5 bg-gray-50 {{ end }}">
            
-            <span class="portrait {{ if eq .placement 1 }} w-48 h-48 rounded-full bg-gray-50 border-8 border-gray-50 flex block {{ else }} w-15 inline-block {{ end}}">
+            <span class="portrait {{ if eq .position 1 }} w-48 h-48 rounded-full bg-gray-50 border-8 border-gray-50 flex block {{ else }} w-15 inline-block {{ end}}">
                 {{ $characterName := .character | humanize | title }}
-                <img class="mx-auto self-center" src="images/{{ $gameVersion }}/portrait/{{ .character}}.png" alt="{{ $characterName }}" />
+                <img class="mx-auto self-center" src="images/{{ $gameVersion }}/portrait/{{ .character}}.png" alt="{{ $characterName }}" />}
             </span>
 
-            <span class="inline-block px-2.5 {{ if eq .placement 1 }} w-full text-white text-center mt-5 {{ else }} w-70 {{ end}}">
-                <span class="name block font-bold {{ if eq .placement 1 }} text-3xl {{ else }} hover-slide text-start {{ end}}">{{ .name }}</span>
-                <span class="combo block invisible opacity-0 text-xs group-hover:visible group-hover:opacity-100 transition-opacity delay-300 duration-1000 ease-in-out {{ if eq .placement 1 }} inline-block text-center text-3xl border-gray-50/30 border-t-1 mt-1 pt-1 {{ else }} text-start border-gray-500/30 {{ end}}">
+            <span class="inline-block px-2.5 {{ if eq .position 1 }} w-full text-white text-center mt-5 {{ else }} w-70 {{ end}}">
+                <span class="name block font-bold {{ if eq .position 1 }} text-3xl {{ else }} hover-slide text-start {{ end}}">{{ .name }}</span>
+                <span class="combo block invisible opacity-0 text-xs group-hover:visible group-hover:opacity-100 transition-opacity delay-300 duration-1000 ease-in-out {{ if eq .position 1 }} inline-block text-center text-3xl border-gray-50/30 border-t-1 mt-1 pt-1 {{ else }} text-start border-gray-500/30 {{ end}}">
                     {{ range $i, $combo := .combo }}
                         {{ if eq $i 0 }}
                             {{ $combo }}
@@ -41,30 +41,8 @@
                 </span>
              </span>
 
-            <span class="position text-end hover-bounce {{ if eq .placement 1 }} w-25 absolute bottom-2 right-0 {{ else }} inline-block w-15 {{ end}}"> 
-                {{ $position := .placement}}
-                {{ $suffix := "" }}
-
-                {{ if eq $position 1 }}
-                    {{ $suffix = "st" }}
-                {{ else if eq $position 2 }}
-                    {{ $suffix = "nd" }}
-                {{ else if eq $position 3 }}
-                    {{ $suffix = "rd" }}
-                {{ else }}
-                    {{ $suffix = "th" }}
-                {{ end }}
-                
-                {{ $placement := printf "%d%s" $position $suffix }}
-
-                {{ $positionUI := "" }}
-                {{ if ge $position 5 }}
-                    {{ $positionUI = "position_gray_" }}
-                {{ else }}
-                    {{ $positionUI = "position_" }}
-                {{ end }}
-
-                <img src="images/ui/position/{{ $positionUI }}{{ $position }}.png" alt="{{ $placement}} place" />
+            <span class="position text-end hover-bounce {{ if eq .position 1 }} w-25 absolute bottom-2 right-0 {{ else }} inline-block w-15 {{ end}}"> 
+                {{ partial "molecules/position.html" . }}
             </span>
         </li>
     {{ end }}

@@ -12,25 +12,25 @@ color = "orange"
 # Result
 [[players]]
 name = "Celina R."
-placement = 1
+position = 1
 character = "baby-daisy"
 combo = ["Biddybuggy", "Roller", "Cloud Glider"]
 
 [[players]]
 name = "Hailey M."
-placement = 2
+position = 2
 character = "bowser-jr"
 combo = ["Varmint", "Standard", "Standard"]
 
 [[players]]
 name = "Brandon C."
-placement = 5
+position = 5
 character = "donkey-kong"
 combo = ["Standard", "Standard", "Standard"]
 
 [[players]]
 name = "Bojan L."
-placement = 6
+position = 6
 character = "toad"
 combo = ["Standard", "Standard", "Standard"]
 +++

@@ -1,6 +1,6 @@
 <div class="race-winner">
     {{ $gameVersion := .Params.game }}
-    {{ $reigningChamp := first 1 (sort .Params.players "placement" "asc") }}
+    {{ $reigningChamp := first 1 (sort .Params.players "position" "asc") }}
     {{ with index $reigningChamp 0 }}
 
     <span class="portrait w-48 h-48 rounded-full bg-gray-50 border-8 border-gray-50 flex block">
@@ -22,16 +22,7 @@
     </span>
     
     <span class="position text-end w-25"> 
-        {{ $position := .placement}}
-
-        {{ $positionUI := "" }}
-        {{ if ge $position 5 }}
-            {{ $positionUI = "position_gray_" }}
-        {{ else }}
-            {{ $positionUI = "position_" }}
-        {{ end }}
-
-        <img src="images/ui/position/{{ $positionUI }}{{ $position }}.png" alt="{{ $position }}st place" />
+       {{ partial "molecules/position.html" . }}
     </span>
     
     {{ end }}
