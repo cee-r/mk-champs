@@ -15,11 +15,13 @@
 
 ### FE Stack
 
-Dice roll on a pretty jank combo but fuck it we ball 😭
+Dice roll on a pretty jank combo but fuck it we ball... 😭
 
 - Hugo 
-- Tailwind ~~because I hate myself~~
+- Tailwind 🤮
 - Atomic design methodology
+
+
 
 ### Content Update
 
