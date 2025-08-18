@@ -132,6 +132,8 @@ combo = ["Standard", "Standard", "Standard"]
 
 ### Characters
 
+Values for the `character` key.
+
 | Character            | Input                | Game    |
 | :------------------- | :------------------- | :------ |
 | Baby Daisy           | `baby-daisy`         | `mk8dx` |
@@ -216,6 +218,8 @@ combo = ["Standard", "Standard", "Standard"]
 | Yoshi (Yellow)       | `yoshi-yellow`       | `mk8dx` |
 
 ### Colours 
+
+Character & colour associations.
 
 | Color      | Input        | Characters                                                                                                                 |
 | :--------- | :----------- | :------------------------------------------------------------------------------------------------------------------------- |
