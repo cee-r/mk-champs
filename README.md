@@ -1,5 +1,13 @@
 # Mario Kart Champs
 
+- [Mario Kart Champs](#mario-kart-champs)
+  - [Colours](#colours)
+  - [Characters](#characters)
+  - [Project](#project)
+    - [FE Stack](#fe-stack)
+    - [Updating](#updating)
+    - [Deploying](#deploying)
+
 Rebuild
 
 ## Colours 
@@ -107,6 +115,82 @@ Rebuild
 | Yoshi (Yellow)       | `yoshi-yellow`       | `mk8dx` |
 
 
-## Update
+## Project
 
-...
+### FE Stack
+- Hugo (was curious about it)
+- Tailwind (because I hate myself)
+
+### Updating
+
+Example content
+
+```
++++
+draft = false
+
+# Race
+date = 2024-02-23T16:48:14-04:00
+title = "Race V"
+description = "Free For All: 4 Heats / 4 Random Tracks / 150CC / Final 4 Choose Tracks"
+mode = ["vs-race"]
+game = ["mk8dx"]
+color = "light-blue"
+
+# Result
+[[players]]
+name = "Celina R."
+placement = 1
+character = "birdo-white"
+combo = ["Teddybuggy", "Roller", "Cloud Glider"]
+
+[[players]]
+name = "Jesse S."
+placement = 2
+character = "toad"
+combo = ["Standard", "Standard", "Standard"]
+
+[[players]]
+name = "Chantal T."
+placement = 4
+character = "yoshi"
+combo = ["Standard", "Standard", "Standard"]
+
+[[players]]
+name = "Joe W."
+placement = 5
+character = "mario"
+combo = ["Standard", "Standard", "Standard"]
++++
+
+```
+
+- `draft` : boolean
+  - Specifies if content is in draft mode
+  - `false` by default
+- `date` : datetime
+  - Date of the race
+- `title` : string
+  - Title of the race
+- `description` : string
+  - Ruleset or information of the competition
+- `mode` : array
+  - Mode of the races (vs-race, grand-prix, etc)
+- `game` : array
+  - Abbreviated version of the Mario Kart game played (mk8dx, mkw, etc)
+- `color` : string
+  - Colours to match winner's character ([refer to the list](#colours))
+- `players` : nested array
+  -`name` : string
+    - Name of player (Firstname L.)
+  - `placement` : number
+    - Placement of player
+  - `character` : string
+    - Character the player used ([refer to the list](#characters))
+  - `combo` : array
+    - List of strings of vehicle parts used
+
+
+### Deploying
+
+Automatically builds and deploys to githubpages on push to `2.x` branch.

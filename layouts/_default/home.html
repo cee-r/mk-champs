@@ -1,34 +1,49 @@
 {{ define "main" }}
 
-<div class="container">
-  <div class="hero">
+<div class="bg">
+
+  <div class="hero container mx-auto py-30 max-w-7xl">
     <div class="title">
-      <span>I&ITS</span>
-      <h1>Mario Kart <span>Champions</span></h1>
+      <span class="text-sm lg:text-base">I&ITS</span>
+      <h1 class="text-4xl md:text-6xl lg:text-8xl">Mario Kart <span class="block font-bold uppercase">Champions</span></h1>
     </div>
     <div class="art"></div>
   </div>
 
-  <div class="feature">
-    <div class="reigning-champ">
-      <div class="race-winner">
+  <div class="feature bg-zinc-900 text-white">
+    <div class="container mx-auto py-50 max-w-7xl flex flex-col md:flex-row">
+      {{ $latest := first 1 (sort .RegularPages "Date" "desc") }}
+      {{ with index $latest 0 }}
 
+      <div class="reigning-champ w-full lg:w-1/2">
+        <div class="race-winner">
+          {{ $reigningChamp := first 1 (sort .Params.players "placement" "asc") }}
+          {{ with index $reigningChamp 0 }}
+          {{ .name }} — {{ .placement }} ({{ .character }})
+          {{ end }}
+        </div>
       </div>
-    </div>
 
-    <div class="race-info"></div>
-    <div class="race-players"></div>
+      <div class="losers w-full lg:w-1/2">
+        <div class="race-info">
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          <p>{{ .Date | time.Format ":date_medium" }}</p>
+        </div>
+
+        <ul class="race-players">
+          {{ $sortedPlayer := sort .Params.players "placement" "asc" }}
+          {{ range (after 1 $sortedPlayer) }}
+          <li>{{ .name }} — {{ .placement }} ({{ .character }})</li>
+          {{ end }}
+        </ul>
+      </div>
+      
+      {{ end }}
+    </div>
+   
   </div>
 
-  {{ $latest := first 1 (sort .RegularPages "Date" "desc") }}
-  {{ with index $latest 0 }}
-    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-    <p>{{ .Date | time.Format ":date_medium" }}</p>
-  {{ end }}
-
-  <hr>
-
-  <div class="races">
+  <div class="races container mx-auto py-30 max-w-7xl flex flex-wrap flex-col md:flex-row">
     {{ $sortedPages := sort .RegularPages "Date" "desc" }}
     {{ range (after 1 $sortedPages) }}
       {{ partial "race" . }}
