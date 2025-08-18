@@ -5,9 +5,9 @@
     <div class="border-b-2 border-gray-50 py-5">
         {{ partial "atoms/meta" (dict "context" . 
             "classes_title" "text-5xl font-bold" 
-            "classes_date" "text-md"
+            "classes_date" "text-lg"
         ) }}
-        <span class="text-sm">{{ .Params.description }}</span>
+        <span class="text-md">{{ .Params.description }}</span>
     </div>
 
     <div class="my-5">
