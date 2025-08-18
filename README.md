@@ -174,9 +174,9 @@ combo = ["Standard", "Standard", "Standard"]
   - Title of the race
 - `description` : string
   - Ruleset or information of the competition
-- `mode` : array
+- `mode` : string
   - Mode of the races (vs-race, grand-prix, etc)
-- `game` : array
+- `game` : string
   - Abbreviated version of the Mario Kart game played (mk8dx, mkw, etc)
 - `color` : string
   - Colours to match winner's character ([refer to the list](#colours))

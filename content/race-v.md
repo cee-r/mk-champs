@@ -5,8 +5,8 @@ draft = false
 date = 2024-02-23T16:48:14-04:00
 title = "Race V"
 description = "Free For All: 4 Heats / 4 Random Tracks / 150CC / Final 4 Choose Tracks"
-mode = ["vs-race"]
-game = ["mk8dx"]
+mode = "vs-race"
+game = "mk8dx"
 color = "light-blue"
 
 # Result
