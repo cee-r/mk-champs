@@ -21,3 +21,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+/public/
+/resources/_gen/
+hugo_build.lock
+Thumbs.db
+.hugo_build.lock
