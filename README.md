@@ -130,39 +130,38 @@ Example content
 draft = false
 
 # Race
-date = 2024-02-23T16:48:14-04:00
-title = "Race V"
-description = "Free For All: 4 Heats / 4 Random Tracks / 150CC / Final 4 Choose Tracks"
-mode = ["vs-race"]
-game = ["mk8dx"]
-color = "light-blue"
+date = {{ .Date }}
+title = "{{ replace .File.ContentBaseName "-" " " | title }}"
+description = "Ruleset"
+mode = "vsrace"
+game = "mk8dx"
+color = ""
 
 # Result
 [[players]]
-name = "Celina R."
+name = "Player 1"
 placement = 1
-character = "birdo-white"
-combo = ["Teddybuggy", "Roller", "Cloud Glider"]
+character = "mario"
+combo = ["Standard", "Standard", "Standard"]
 
 [[players]]
-name = "Jesse S."
+name = "Player 2"
 placement = 2
+character = "luigi"
+combo = ["Standard", "Standard", "Standard"]
+
+[[players]]
+name = "Player 3"
+placement = 3
 character = "toad"
 combo = ["Standard", "Standard", "Standard"]
 
 [[players]]
-name = "Chantal T."
+name = "Player 4"
 placement = 4
 character = "yoshi"
 combo = ["Standard", "Standard", "Standard"]
-
-[[players]]
-name = "Joe W."
-placement = 5
-character = "mario"
-combo = ["Standard", "Standard", "Standard"]
 +++
-
 ```
 
 - `draft` : boolean

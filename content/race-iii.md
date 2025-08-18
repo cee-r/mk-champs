@@ -5,8 +5,8 @@ draft = false
 date = 2023-03-10T16:39:12-04:00
 title = "MAR10 Day"
 description = "Free For All: 4 Heats / 4 Random Tracks / 150CC. Final 4 / 4 Random Tracks / 200CC"
-mode = "vs-race"
 game = "mk8dx"
+mode = ["vs", "200CC"]
 color = "red"
 
 # Result

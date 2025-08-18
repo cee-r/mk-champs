@@ -5,8 +5,8 @@ draft = false
 date = {{ .Date }}
 title = "{{ replace .File.ContentBaseName "-" " " | title }}"
 description = "Ruleset"
-mode = "vsrace"
 game = "mk8dx"
+mode = ["vs", "150CC"]
 color = ""
 
 # Result

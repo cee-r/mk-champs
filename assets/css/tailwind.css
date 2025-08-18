@@ -1,0 +1,7 @@
+@import "tailwindcss";
+@source "hugo_stats.json";
+
+
+@theme {
+    --animate-bounce-once: bounce 1s ease-in-out 1;
+}

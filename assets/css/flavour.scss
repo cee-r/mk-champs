@@ -1,0 +1,30 @@
+@import "_characters";
+
+// Overrides
+.race  {
+    &:hover {
+        .hover-bounce {
+            animation: bounce .7s; /* use any Animate.css animation name */
+        }
+
+        .hover-slide {
+            transform: translate(0, 0) !important;
+        }
+    }
+
+    .players {
+        li:nth-child(2) span { animation-delay: .2s; }
+        li:nth-child(3) span { animation-delay: .3s; }
+        li:nth-child(4) span { animation-delay: .4s; }
+
+
+        li:not(.winner) {
+            .name {
+                transform: translate(0, .5rem);
+                transition: all;
+                transition-duration: 1s;
+            }
+        }
+    }
+}
+    
