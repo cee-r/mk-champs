@@ -1,0 +1,36 @@
++++
+draft = false
+
+# Race
+date = {{ .Date }}
+title = "{{ replace .File.ContentBaseName "-" " " | title }}"
+description = "Ruleset"
+mode = ["vsrace"]
+game = ["mk8dx"]
+color = ""
+
+# Result
+[[players]]
+name = "Player 1"
+placement = 1
+character = "mario"
+combo = ["Standard", "Standard", "Standard"]
+
+[[players]]
+name = "Player 2"
+placement = 2
+character = "luigi"
+combo = ["Standard", "Standard", "Standard"]
+
+[[players]]
+name = "Player 3"
+placement = 3
+character = "toad"
+combo = ["Standard", "Standard", "Standard"]
+
+[[players]]
+name = "Player 4"
+placement = 4
+character = "yoshi"
+combo = ["Standard", "Standard", "Standard"]
++++
