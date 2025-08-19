@@ -1,5 +1,5 @@
 <ul class="mk-tags">
     {{ $classes := .classes }}
     <li class="inline-block"><span class="{{ $classes }}">{{ .context.Params.game }}</span></li>
-    {{ range .context.Params.mode }}<li class="inline-block"><span class="{{ $classes }}">{{ . }}</span></li> {{ end }}
+    {{ range .context.Params.mode }}<li class="inline-block ms-1"><span class="{{ $classes }}">{{ . }}</span></li> {{ end }}
 </ul>
