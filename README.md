@@ -1,4 +1,4 @@
-# Mario Kart Champs
+# Mario Kart Champs ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/username/repo)
 
 - [Project](#project)
   - [FE Stack](#fe-stack)
