@@ -1,4 +1,4 @@
-# Mario Kart Champs ![GitHub Release](https://github.com/cee-r/mk-champs/releases)
+# Mario Kart Champs ![GitHub Release](https://img.shields.io/github/v/release/cee-r/mk-champs?link=https://github.com/cee-r/mk-champs/releases)
 
 
 
