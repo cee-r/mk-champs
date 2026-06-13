@@ -17,7 +17,7 @@
 
 ### FE Stack
 
-Dice roll on a pretty jank combo but fuck it we ball... 😭
+[Dice roll on a pretty jank combo](https://cee-r.github.io/stack-slots/) but fuck it we ball... 😭
 <img width="1047" height="473" alt="image" src="https://github.com/user-attachments/assets/11a72705-6b78-4455-9bae-c888705573bd" />
 
 - Hugo 
